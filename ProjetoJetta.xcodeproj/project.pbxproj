@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
-		E1BDC6142A0DA79F00F71A08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6132A0DA79F00F71A08 /* ContentView.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
 		E1BDC6242A0DAACD00F71A08 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6232A0DAACD00F71A08 /* .swiftlint.yml */; };
@@ -19,14 +18,16 @@
 		E1BDC6392A0DB3CC00F71A08 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6382A0DB3CC00F71A08 /* HomeScreen.swift */; };
 		E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC63B2A0DB46A00F71A08 /* Collections.swift */; };
 		E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */; };
-		E1BDC6412A0DB6B900F71A08 /* HamburguerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6402A0DB6B900F71A08 /* HamburguerView.swift */; };
+		E1BDC6412A0DB6B900F71A08 /* HeaderHamburguerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6402A0DB6B900F71A08 /* HeaderHamburguerView.swift */; };
 		E1BDC6472A0DB9A400F71A08 /* SideBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6462A0DB9A400F71A08 /* SideBarMenuView.swift */; };
+		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
+		E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857822A0EAD6900D31CD4 /* HeaderView.swift */; };
+		E1F857862A0ED48E00D31CD4 /* VeiculoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
-		E1BDC6132A0DA79F00F71A08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1BDC6232A0DAACD00F71A08 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -37,9 +38,12 @@
 		E1BDC6382A0DB3CC00F71A08 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E1BDC63B2A0DB46A00F71A08 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheMenuView.swift; sourceTree = "<group>"; };
-		E1BDC6402A0DB6B900F71A08 /* HamburguerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburguerView.swift; sourceTree = "<group>"; };
+		E1BDC6402A0DB6B900F71A08 /* HeaderHamburguerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHamburguerView.swift; sourceTree = "<group>"; };
 		E1BDC6462A0DB9A400F71A08 /* SideBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuView.swift; sourceTree = "<group>"; };
 		E1BDC6482A0DC1E300F71A08 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E1F857822A0EAD6900D31CD4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */,
-				E1BDC6132A0DA79F00F71A08 /* ContentView.swift */,
 				E1BDC62A2A0DAEE400F71A08 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
@@ -182,7 +185,8 @@
 		E1BDC63F2A0DB6A400F71A08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC6402A0DB6B900F71A08 /* HamburguerView.swift */,
+				E1BDC6402A0DB6B900F71A08 /* HeaderHamburguerView.swift */,
+				E1F857822A0EAD6900D31CD4 /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +194,7 @@
 		E1BDC6422A0DB75800F71A08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 		E1BDC6432A0DB93500F71A08 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1F857842A0ED46E00D31CD4 /* Cadastros */,
 				E1BDC6452A0DB98D00F71A08 /* Settings */,
 				E1BDC62F2A0DB23E00F71A08 /* Routing */,
 				E1BDC6332A0DB31200F71A08 /* Root */,
@@ -214,9 +220,25 @@
 		E1BDC6452A0DB98D00F71A08 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E1F8577F2A0EAC3200D31CD4 /* View */,
 				E1BDC6462A0DB9A400F71A08 /* SideBarMenuView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		E1F8577F2A0EAC3200D31CD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1F857842A0ED46E00D31CD4 /* Cadastros */ = {
+			isa = PBXGroup;
+			children = (
+				E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */,
+			);
+			path = Cadastros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,14 +344,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BDC6472A0DB9A400F71A08 /* SideBarMenuView.swift in Sources */,
-				E1BDC6142A0DA79F00F71A08 /* ContentView.swift in Sources */,
 				E1BDC6392A0DB3CC00F71A08 /* HomeScreen.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
+				E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,
-				E1BDC6412A0DB6B900F71A08 /* HamburguerView.swift in Sources */,
+				E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */,
+				E1BDC6412A0DB6B900F71A08 /* HeaderHamburguerView.swift in Sources */,
 				E1BDC6322A0DB28700F71A08 /* AppRoute.swift in Sources */,
 				E1BDC6362A0DB32E00F71A08 /* RootScreen.swift in Sources */,
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
+				E1F857862A0ED48E00D31CD4 /* VeiculoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +504,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,6 +534,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

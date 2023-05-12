@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import UIPilot
 
 struct DetalheMenuView: View
 {
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
     var collection: Collections
     let height: CGFloat = 110
     
@@ -20,7 +22,7 @@ struct DetalheMenuView: View
                 .fill(Color.gray)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
                 .opacity(0.4)
-                // .onTapGesture { screenRouter(indice: collection.id)}
+                .onTapGesture { pilot.push(.abastecimento)}
             
             Text(collection.name)
                 .font(.system(.largeTitle, design: .rounded))

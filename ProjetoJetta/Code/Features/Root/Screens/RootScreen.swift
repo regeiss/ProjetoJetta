@@ -8,10 +8,9 @@
 import SwiftUI
 import UIPilot
 
+@available(iOS 16.0, *)
 struct RootScreen: View
 {
-    @EnvironmentObject var pilot: UIPilot<AppRoute>
-    
     @State var showMenu: Bool
     
     var body: some View
@@ -39,7 +38,6 @@ struct RootScreen: View
                         .frame(width: geometry.size.width / 2)
                 }
             }.gesture(drag)
-            
         }
     }
 }

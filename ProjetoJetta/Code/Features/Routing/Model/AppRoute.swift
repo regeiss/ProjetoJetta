@@ -12,4 +12,6 @@ enum AppRoute: Equatable
     case root
     case login
     case browser
+    case settings
+    case abastecimento
 }

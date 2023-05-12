@@ -9,6 +9,7 @@ import SwiftUI
 import UIPilot
 
 @main
+@available(iOS 16.0, *)
 struct ProjetoJettaApp: App
 {
     @Environment(\.scenePhase) private var scenePhase
@@ -29,6 +30,8 @@ struct ProjetoJettaApp: App
                 case .root: RootScreen(showMenu: false)
                 case .login: EmptyView()
                 case .browser: EmptyView()
+                case .settings: SettingsView()
+                case .abastecimento: VeiculoView()
                 }
             }
         }

@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import UIPilot
 
 struct SideMenuView: View
 {
     @Binding var showMenu: Bool
-
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
     let appBuild = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
     var body: some View
@@ -75,7 +76,7 @@ struct SideMenuView: View
             .onTapGesture
             {
                 showMenu = false
-                // router.toConfig()
+                pilot.push(.settings)
             }
             Spacer()
             HStack

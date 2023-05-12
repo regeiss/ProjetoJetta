@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct HamburguerView: View
+struct HeaderHamburguerView: View
 {
     @Binding var showMenu: Bool
-    @State private var isShowingSheet = false
     
     var nomeView: String = ""
     var nomeMenu: String = "Menu inicial"
