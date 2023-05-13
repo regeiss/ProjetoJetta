@@ -19,10 +19,6 @@ struct VeiculoView: View
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }.navigationTitle("Abastecimento")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarRole(.editor)
-//            .toolbar { ToolbarItem(placement: .navigationBarLeading)
-//                { Button { showMenu = true}
-//                label: { Image(systemName: "line.3.horizontal")}}
+            .toolbarRole(.navigationStack)
     }
 }
-
