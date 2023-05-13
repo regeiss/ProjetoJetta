@@ -20,7 +20,7 @@ struct DetalheMenuView: View
         ZStack(alignment: .bottomTrailing)
         {
             RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThickMaterial)
+                .background(.ultraThickMaterial)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
                 // .opacity(0.4)
                 .onTapGesture { pilot.push(.abastecimento)}
@@ -28,7 +28,7 @@ struct DetalheMenuView: View
             Text(collection.name)
                 .font(.system(.largeTitle, design: .rounded))
                 .fontWeight(.heavy)
-                .foregroundColor(.blue)
+                .foregroundColor(.white)
                 .offset(x: 1.0, y: 10)
                 .padding()
                 .allowsHitTesting(false)

@@ -38,6 +38,7 @@ struct RootScreen: View
                         .frame(width: geometry.size.width / 2)
                 }
             }.gesture(drag)
+            .modifier(DarkModeViewModifier())
         }
     }
 }
