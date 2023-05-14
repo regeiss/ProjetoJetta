@@ -20,11 +20,16 @@
 		E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */; };
 		E1BDC6412A0DB6B900F71A08 /* HeaderHamburguerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6402A0DB6B900F71A08 /* HeaderHamburguerView.swift */; };
 		E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC64A2A0EF5D600F71A08 /* SideBarMenuView.swift */; };
-		E1BDC6502A0FDF3D00F71A08 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC64F2A0FDF3D00F71A08 /* AppTheme.swift */; };
 		E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6522A0FDFAD00F71A08 /* AppThemeViewModifier.swift */; };
+		E1BDC6562A1125B200F71A08 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6552A1125B200F71A08 /* Realm */; };
+		E1BDC6582A1125B200F71A08 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6572A1125B200F71A08 /* RealmSwift */; };
+		E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC65B2A1129C400F71A08 /* VeiculoModel.swift */; };
+		E1BDC65F2A1193E700F71A08 /* VeiculoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */; };
+		E1BDC6622A119F6F00F71A08 /* DetalheVeiculoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6612A119F6F00F71A08 /* DetalheVeiculoView.swift */; };
+		E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */; };
 		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
 		E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857822A0EAD6900D31CD4 /* HeaderView.swift */; };
-		E1F857862A0ED48E00D31CD4 /* VeiculoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */; };
+		E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +48,14 @@
 		E1BDC6402A0DB6B900F71A08 /* HeaderHamburguerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHamburguerView.swift; sourceTree = "<group>"; };
 		E1BDC6482A0DC1E300F71A08 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1BDC64A2A0EF5D600F71A08 /* SideBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuView.swift; sourceTree = "<group>"; };
-		E1BDC64F2A0FDF3D00F71A08 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		E1BDC6522A0FDFAD00F71A08 /* AppThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeViewModifier.swift; sourceTree = "<group>"; };
+		E1BDC65B2A1129C400F71A08 /* VeiculoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoModel.swift; sourceTree = "<group>"; };
+		E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoViewModel.swift; sourceTree = "<group>"; };
+		E1BDC6612A119F6F00F71A08 /* DetalheVeiculoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVeiculoView.swift; sourceTree = "<group>"; };
+		E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoAction.swift; sourceTree = "<group>"; };
 		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E1F857822A0EAD6900D31CD4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoView.swift; sourceTree = "<group>"; };
+		E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BDC6582A1125B200F71A08 /* RealmSwift in Frameworks */,
+				E1BDC6562A1125B200F71A08 /* Realm in Frameworks */,
 				E1BDC62E2A0DB1A300F71A08 /* UIPilot in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,10 +95,10 @@
 				E1BDC6202A0DA8F800F71A08 /* Code */,
 				E1BDC6212A0DA91000F71A08 /* Config */,
 				E1BDC6172A0DA7A000F71A08 /* Preview Content */,
+				E1BDC6482A0DC1E300F71A08 /* README.md */,
 				E1BDC6222A0DA91B00F71A08 /* Resources */,
 				E1BDC61F2A0DA8DF00F71A08 /* SupportingFiles */,
 				E1BDC6442A0DB96700F71A08 /* Utilities */,
-				E1BDC6482A0DC1E300F71A08 /* README.md */,
 			);
 			path = ProjetoJetta;
 			sourceTree = "<group>";
@@ -207,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC64C2A0F37E700F71A08 /* Home */,
-				E1F857842A0ED46E00D31CD4 /* Cadastros */,
+				E1F857842A0ED46E00D31CD4 /* Veiculo */,
 				E1BDC6452A0DB98D00F71A08 /* Settings */,
 				E1BDC62F2A0DB23E00F71A08 /* Routing */,
 				E1BDC6332A0DB31200F71A08 /* Root */,
@@ -258,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC6512A0FDF8D00F71A08 /* ViewModifiers */,
-				E1BDC64F2A0FDF3D00F71A08 /* AppTheme.swift */,
 			);
 			path = AppTheme;
 			sourceTree = "<group>";
@@ -271,12 +280,56 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		E1F857842A0ED46E00D31CD4 /* Cadastros */ = {
+		E1BDC6592A11289500F71A08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E1F857852A0ED48E00D31CD4 /* VeiculoView.swift */,
+				E1BDC65B2A1129C400F71A08 /* VeiculoModel.swift */,
 			);
-			path = Cadastros;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1BDC65A2A11289F00F71A08 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E1BDC65D2A1193D400F71A08 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1BDC6602A119F4900F71A08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC6612A119F6F00F71A08 /* DetalheVeiculoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1BDC6652A11A02900F71A08 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		E1F857842A0ED46E00D31CD4 /* Veiculo */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC6652A11A02900F71A08 /* Action */,
+				E1BDC6592A11289500F71A08 /* Model */,
+				E1BDC65A2A11289F00F71A08 /* Screen */,
+				E1BDC6602A119F4900F71A08 /* View */,
+				E1BDC65D2A1193D400F71A08 /* ViewModel */,
+			);
+			path = Veiculo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +351,8 @@
 			name = ProjetoJetta;
 			packageProductDependencies = (
 				E1BDC62D2A0DB1A300F71A08 /* UIPilot */,
+				E1BDC6552A1125B200F71A08 /* Realm */,
+				E1BDC6572A1125B200F71A08 /* RealmSwift */,
 			);
 			productName = ProjetoJetta;
 			productReference = E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */;
@@ -330,6 +385,7 @@
 			mainGroup = E1BDC6052A0DA79F00F71A08;
 			packageReferences = (
 				E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */,
+				E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E1BDC60F2A0DA79F00F71A08 /* Products */;
 			projectDirPath = "";
@@ -381,19 +437,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BDC65F2A1193E700F71A08 /* VeiculoViewModel.swift in Sources */,
 				E1BDC6392A0DB3CC00F71A08 /* HomeScreen.swift in Sources */,
+				E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */,
+				E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */,
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
+				E1BDC6622A119F6F00F71A08 /* DetalheVeiculoView.swift in Sources */,
 				E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,
 				E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */,
 				E1BDC6412A0DB6B900F71A08 /* HeaderHamburguerView.swift in Sources */,
 				E1BDC6322A0DB28700F71A08 /* AppRoute.swift in Sources */,
 				E1BDC6362A0DB32E00F71A08 /* RootScreen.swift in Sources */,
-				E1BDC6502A0FDF3D00F71A08 /* AppTheme.swift in Sources */,
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
-				E1F857862A0ED48E00D31CD4 /* VeiculoView.swift in Sources */,
+				E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +679,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -627,6 +694,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */;
 			productName = UIPilot;
+		};
+		E1BDC6552A1125B200F71A08 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E1BDC6572A1125B200F71A08 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

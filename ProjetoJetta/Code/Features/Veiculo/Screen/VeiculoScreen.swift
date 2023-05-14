@@ -9,15 +9,16 @@ import SwiftUI
 import UIPilot
 
 @available(iOS 16.0, *)
-struct VeiculoView: View
+struct VeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     var body: some View
     {
         VStack
         {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        }.navigationTitle("Abastecimento")
+            Text("Veiculo")
+            
+        }.navigationTitle("Veículo")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarRole(.navigationStack)
     }

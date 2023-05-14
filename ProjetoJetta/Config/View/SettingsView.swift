@@ -15,7 +15,7 @@ struct SettingsView: View
     @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
     @AppStorage("contextSet") private var contextSet: Bool = false
     @AppStorage("modoEscuro") private var modoEscuro: Bool = false
-    @AppStorage("backyp") private var backup: Bool = false
+    @AppStorage("backup") private var backup: Bool = false
     @AppStorage("alertas") private var alertas: Bool = false
     
 //    init()
@@ -56,11 +56,6 @@ struct SettingsView: View
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    
-                    Button("OK")
-                    {
-                        pilot.pop(animated: .random())
-                    }
                 }
             }
             Spacer()

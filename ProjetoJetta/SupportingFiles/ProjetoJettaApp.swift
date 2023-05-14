@@ -31,7 +31,7 @@ struct ProjetoJettaApp: App
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
-                case .abastecimento: VeiculoView()
+                case .abastecimento: VeiculoScreen()
                 }
             }
         }
