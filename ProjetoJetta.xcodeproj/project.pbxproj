@@ -27,6 +27,7 @@
 		E1BDC65F2A1193E700F71A08 /* VeiculoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */; };
 		E1BDC6622A119F6F00F71A08 /* DetalheVeiculoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6612A119F6F00F71A08 /* DetalheVeiculoView.swift */; };
 		E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */; };
+		E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */; };
 		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
 		E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857822A0EAD6900D31CD4 /* HeaderView.swift */; };
 		E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */; };
@@ -53,6 +54,7 @@
 		E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoViewModel.swift; sourceTree = "<group>"; };
 		E1BDC6612A119F6F00F71A08 /* DetalheVeiculoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVeiculoView.swift; sourceTree = "<group>"; };
 		E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoAction.swift; sourceTree = "<group>"; };
+		E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E1F857822A0EAD6900D31CD4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoScreen.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		E1BDC6212A0DA91000F71A08 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				E1BDC6662A12FDC000F71A08 /* Realm */,
 				E1BDC64E2A0FDF1900F71A08 /* AppTheme */,
 				E1BDC6422A0DB75800F71A08 /* View */,
 			);
@@ -320,6 +323,14 @@
 			path = Action;
 			sourceTree = "<group>";
 		};
+		E1BDC6662A12FDC000F71A08 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		E1F857842A0ED46E00D31CD4 /* Veiculo */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +452,7 @@
 				E1BDC6392A0DB3CC00F71A08 /* HomeScreen.swift in Sources */,
 				E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */,
 				E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */,
+				E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */,
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,

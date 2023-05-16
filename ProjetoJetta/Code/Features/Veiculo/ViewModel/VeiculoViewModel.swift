@@ -12,7 +12,6 @@ class VeiculoViewModel: ObservableObject
 {
     func saveObject(veiculo: Veiculo)
     {
-        let veiculo = veiculo
         do
         {
             let realm = try Realm()
@@ -20,10 +19,13 @@ class VeiculoViewModel: ObservableObject
             {
                 realm.add(veiculo)
             }
-        }
-        catch
-        {
             
+            let carro = realm.objects(Veiculo.self)
+            print(carro)
+        }
+        catch let error as NSError
+        {
+            print(error)
         }
     }
 }
