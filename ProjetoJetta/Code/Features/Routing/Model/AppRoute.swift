@@ -14,4 +14,5 @@ enum AppRoute: Equatable
     case browser
     case settings
     case abastecimento
+    case detalheVeiculo(Veiculo)
 }

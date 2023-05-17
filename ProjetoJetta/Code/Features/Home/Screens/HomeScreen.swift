@@ -36,6 +36,7 @@ struct HomeScreen: View
         {
             ScrollView(.vertical)
             {
+                Spacer()
                 LazyVGrid(columns: columns, alignment: .center, spacing: 5)
                 {
                     DetalheMenuView(collection: collections[0])
@@ -48,7 +49,7 @@ struct HomeScreen: View
                     .gesture(drag)
             }
             .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbarRole(.navigationStack)
             .toolbar { ToolbarItem(placement: .navigationBarLeading)
                 { Button { showMenu = true}

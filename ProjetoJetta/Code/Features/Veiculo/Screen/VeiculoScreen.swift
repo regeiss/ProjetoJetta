@@ -7,24 +7,34 @@
 
 import SwiftUI
 import UIPilot
+import RealmSwift
 
 @available(iOS 16.0, *)
 struct VeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = VeiculoViewModel()
+    @ObservedRealmObject var veiculo: Veiculo
     
     var body: some View
     {
         VStack
         {
-            Text("Veiculo")
+            Form
+            {
+                Section
+                {
+                    TextField("nome", text: $veiculo.name)
+                    // TextField("modelo", text: $veiculo.modelo)
+                    // TextField("placa", text: $veiculo.placa)
+                    // TextField("chassis", text: $veiculo.chassis)
+                    // TextField("ano", text: $veiculo.ano)
+                }
+            }
             
         }.navigationTitle("Veículo")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarRole(.navigationStack)
-        .onAppear { save()}
-            
+            .navigationBarTitleDisplayMode(.automatic)
+        
     }
     
     func save()

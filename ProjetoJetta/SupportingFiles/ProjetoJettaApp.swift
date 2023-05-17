@@ -30,7 +30,8 @@ struct ProjetoJettaApp: SwiftUI.App
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
-                case .abastecimento: ListaVeiculoView()
+                case .abastecimento: ListaVeiculoScreen()
+                case .detalheVeiculo: DetalheListaVeiculoView(veiculo: Veiculo())
                 }
             }
         }

@@ -7,16 +7,22 @@
 
 import SwiftUI
 import RealmSwift
+import UIPilot
 
-struct DetalheVeiculoView: View
+struct DetalheListaVeiculoView: View
 {
     @ObservedRealmObject var veiculo: Veiculo
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
+    
     var body: some View
     {
         HStack
         {
             Text(veiculo.name)
             Text(veiculo.placa ?? "")
+            Text(veiculo.modelo ?? "")
+        }.onTapGesture {
+            pilot.push(.detalheVeiculo(veiculo))
         }
     }
 }
