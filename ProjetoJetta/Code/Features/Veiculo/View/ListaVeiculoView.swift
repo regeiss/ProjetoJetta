@@ -21,10 +21,10 @@ struct ListaVeiculoView: View
                 DetalheVeiculoView(veiculo: veiculo)
             }
         }.navigationTitle("Veículos")
-            .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
-                Button("+") { print("Add")}
+                       .toolbar { ToolbarItem(placement: .navigationBarTrailing)
+                { Button { showMenu = true}
+                label: { Image(systemName: "plus")}}
             }
-            
             }
     }
 }
