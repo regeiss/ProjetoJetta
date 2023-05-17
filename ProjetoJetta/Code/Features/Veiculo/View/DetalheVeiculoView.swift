@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
 
-struct DetalheVeiculoView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct DetalheVeiculoView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetalheVeiculoView()
+struct DetalheVeiculoView: View
+{
+    @ObservedRealmObject var veiculo: Veiculo
+    var body: some View
+    {
+        HStack
+        {
+            Text(veiculo.name)
+            Text(veiculo.placa ?? "")
+        }
     }
 }

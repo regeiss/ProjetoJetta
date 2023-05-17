@@ -7,18 +7,16 @@
 
 import SwiftUI
 import UIPilot
+import RealmSwift
+
+let app = App(id: "tasktracker-xxxxx")
 
 @main
 @available(iOS 16.0, *)
-struct ProjetoJettaApp: App
+struct ProjetoJettaApp: SwiftUI.App
 {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject var pilot = UIPilot(initial: AppRoute.root)
-    
-//    init()
-//    {
-//        NetworkMonitor.shared.startMonitoring()
-//    }
     
     var body: some Scene
     {
@@ -28,10 +26,11 @@ struct ProjetoJettaApp: App
                 switch route
                 {
                 case .root: RootScreen(showMenu: false)
+                        .environment(\.realmConfiguration, RealmMigrator.configuration)
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
-                case .abastecimento: VeiculoScreen()
+                case .abastecimento: ListaVeiculoView()
                 }
             }
         }
