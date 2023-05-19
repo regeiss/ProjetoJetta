@@ -2,8 +2,8 @@
 ##
 ### Packages:
 
- UIPilot
- RealmSwift
- FOrmValidator
+- UIPilot
+- RealmSwift
+- FormValidator
 
 
