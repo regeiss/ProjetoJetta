@@ -4,5 +4,6 @@
 
  UIPilot
  RealmSwift
+ FOrmValidator
 
 
