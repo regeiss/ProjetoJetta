@@ -22,7 +22,7 @@ struct ListaVeiculoDetalheView: View
             Text(veiculo.placa ?? "")
             Text(veiculo.modelo ?? "")
         }.onTapGesture {
-            pilot.push(.edicaoVeiculo(veiculo))
+            pilot.push(.edicaoVeiculo(veiculo, isEdit: true))
         }
     }
 }

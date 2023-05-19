@@ -26,12 +26,12 @@ struct ProjetoJettaApp: SwiftUI.App
                 switch route
                 {
                 case .root: RootScreen(showMenu: false)
-                        .environment(\.realmConfiguration, RealmMigrator.configuration)
+                        .environment(\.realmConfiguration, RealmConfig.self.configuration)
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
                 case .abastecimento: ListaVeiculoScreen()
-                case .edicaoVeiculo: EdicaoVeiculoScreen(veiculo: Veiculo())
+                case .edicaoVeiculo: EdicaoVeiculoScreen(veiculo: Veiculo(), isEdit: true)
                 }
             }
         }
@@ -41,6 +41,7 @@ struct ProjetoJettaApp: SwiftUI.App
             {
             case .active:
                 print("active")
+                print(Realm.Configuration.defaultConfiguration.fileURL as Any)
             case .inactive:
                 print("inactive")
             case .background:

@@ -10,7 +10,7 @@ import RealmSwift
 
 class VeiculoViewModel: ObservableObject
 {
-    func saveObject(veiculo: Veiculo)
+    func saveObject(veiculo: Veiculo, isEdit: Bool)
     {
         do
         {
@@ -19,9 +19,6 @@ class VeiculoViewModel: ObservableObject
             {
                 realm.add(veiculo)
             }
-            
-            let carro = realm.objects(Veiculo.self)
-            print(carro)
         }
         catch let error as NSError
         {

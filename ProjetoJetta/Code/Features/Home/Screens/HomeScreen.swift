@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @available(iOS 16.0, *)
 struct HomeScreen: View
 {
     @Binding var showMenu: Bool
     @State private var isShowingSheet = false
+    @ObservedResults(Veiculo.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var veiculos
     
     let collections = [
         Collections(id: 0, name: "Abastecimento", image: "gasStation", content: "."),
@@ -60,14 +62,23 @@ struct HomeScreen: View
                 { Button { isShowingSheet = true}
                     label: { Image(systemName: "car.2")}}
             }
-        }.sheet(isPresented: $isShowingSheet, onDismiss: didDismiss)
+        }.edgesIgnoringSafeArea(.all)
+        .background {Color.teal.opacity(0.8).ignoresSafeArea()}
+        .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss)
         {
             List
             {
                 Section(header: Text("Selecione um carro"))
                 {
-                    
-                    Spacer()
+                    ForEach(veiculos) { veiculo in
+                        HStack
+                        {
+                            Text(veiculo.name)
+                            Text(veiculo.placa ?? "")
+                            Text(String(veiculo.ano))
+                        }
+                    }
+
                 }
             }.presentationDetents([.medium, .large])
             

@@ -18,10 +18,4 @@ enum RealmMigrator
             //                newObject?["marca"] = ColorOptions.green
         }
     }
-    
-    
-    static var configuration: Realm.Configuration
-    {
-        Realm.Configuration(schemaVersion: 1, migrationBlock: migrationBlock)
-    }
 }

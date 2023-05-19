@@ -10,5 +10,8 @@ import RealmSwift
 
 struct RealmConfig
 {
-    let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        static var configuration: Realm.Configuration
+        {
+            Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
+        }
 }

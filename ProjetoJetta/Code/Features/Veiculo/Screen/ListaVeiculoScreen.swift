@@ -23,11 +23,11 @@ struct ListaVeiculoScreen: View
                 ListaVeiculoDetalheView(veiculo: veiculo)
             }
         }.navigationBarTitle("Veículos", displayMode: .automatic)
-        .toolbar { ToolbarItem(placement: .navigationBarTrailing)
-            { Button {
-                pilot.push(.edicaoVeiculo(Veiculo()))
+            .toolbar { ToolbarItem(placement: .navigationBarTrailing)
+                { Button {
+                    pilot.push(.edicaoVeiculo(Veiculo(), isEdit: false))
+                }
+                    label: { Image(systemName: "plus")}}
             }
-                label: { Image(systemName: "plus")}}
-        }
     }
 }

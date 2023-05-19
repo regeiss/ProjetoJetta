@@ -15,8 +15,10 @@ struct EdicaoVeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = VeiculoViewModel()
-    @ObservedRealmObject var veiculo: Veiculo
+    var veiculo: Veiculo
     @ObservedObject var formInfo = CarroFormInfo()
+    @State var isSaveDisabled: Bool = true
+    var isEdit: Bool
     
     var body: some View
     {
@@ -34,7 +36,17 @@ struct EdicaoVeiculoScreen: View
                     TextField("ano", text: $formInfo.ano)
                 }
             }
-        }.navigationTitle("Veículo")
+        }.onAppear {
+            if isEdit {
+                formInfo.nome = veiculo.name
+                formInfo.marca = veiculo.marca ?? ""
+                formInfo.modelo = veiculo.modelo ?? ""
+                formInfo.placa = veiculo.placa ?? ""
+                formInfo.chassis = veiculo.chassis ?? ""
+                formInfo.ano = String(veiculo.ano) 
+            }
+        }
+        .navigationTitle("Veículo")
         .navigationBarTitleDisplayMode(.automatic)
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -45,7 +57,8 @@ struct EdicaoVeiculoScreen: View
                 label: { Text("Cancelar")}}
             ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                pilot.push(.edicaoVeiculo(Veiculo()))
+                save()
+                pilot.pop(animated: .random())
             }
                 label: { Text("OK")}}
         }
@@ -55,15 +68,15 @@ struct EdicaoVeiculoScreen: View
     {
         let veiculo = Veiculo()
         
-        veiculo.name = "Jetta"
-        veiculo.marca = "VW"
-        veiculo.modelo = "Sedan"
-        veiculo.ano = 2008
-        veiculo.placa = "IOP7I24"
-        veiculo.chassis = "VW3HYTV213"
+        veiculo.name = formInfo.nome
+        veiculo.marca = formInfo.marca
+        veiculo.modelo = formInfo.modelo
+        veiculo.ano = Int(formInfo.ano) ?? 0
+        veiculo.placa = formInfo.placa
+        veiculo.chassis = formInfo.chassis
         veiculo.ativo = false
         veiculo.padrao = false
-        viewModel.saveObject(veiculo: veiculo)
+        viewModel.saveObject(veiculo: veiculo, isEdit: isEdit)
     }
 }
 
