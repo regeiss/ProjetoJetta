@@ -13,7 +13,7 @@ struct DetalheMenuView: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     var collection: Collections
-    let height: CGFloat = 110
+    let height: CGFloat = 120
     
     var body: some View
     {

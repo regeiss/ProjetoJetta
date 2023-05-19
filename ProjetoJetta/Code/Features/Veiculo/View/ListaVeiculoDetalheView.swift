@@ -1,5 +1,5 @@
 //
-//  DetalheVeiculoView.swift
+//  ListaVeiculoDetalheView.swift
 //  ProjetoJetta
 //
 //  Created by Roberto Edgar Geiss on 14/05/23.
@@ -9,7 +9,7 @@ import SwiftUI
 import RealmSwift
 import UIPilot
 
-struct DetalheListaVeiculoView: View
+struct ListaVeiculoDetalheView: View
 {
     @ObservedRealmObject var veiculo: Veiculo
     @EnvironmentObject var pilot: UIPilot<AppRoute>
@@ -22,7 +22,7 @@ struct DetalheListaVeiculoView: View
             Text(veiculo.placa ?? "")
             Text(veiculo.modelo ?? "")
         }.onTapGesture {
-            pilot.push(.detalheVeiculo(veiculo))
+            pilot.push(.edicaoVeiculo(veiculo))
         }
     }
 }

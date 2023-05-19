@@ -20,12 +20,12 @@ struct ListaVeiculoScreen: View
         List
         {
             ForEach(veiculos) { veiculo in
-                DetalheListaVeiculoView(veiculo: veiculo)
+                ListaVeiculoDetalheView(veiculo: veiculo)
             }
         }.navigationBarTitle("Veículos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                pilot.push(.detalheVeiculo(Veiculo()))
+                pilot.push(.edicaoVeiculo(Veiculo()))
             }
                 label: { Image(systemName: "plus")}}
         }

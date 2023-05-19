@@ -11,6 +11,7 @@ import SwiftUI
 struct HomeScreen: View
 {
     @Binding var showMenu: Bool
+    @State private var isShowingSheet = false
     
     let collections = [
         Collections(id: 0, name: "Abastecimento", image: "gasStation", content: "."),
@@ -44,17 +45,40 @@ struct HomeScreen: View
                     DetalheMenuView(collection: collections[2])
                     DetalheMenuView(collection: collections[3])
                     DetalheMenuView(collection: collections[4])
-                    
                 }.padding([.leading, .trailing])
-                    .gesture(drag)
+                .gesture(drag)
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.automatic)
             .toolbarRole(.navigationStack)
-            .toolbar { ToolbarItem(placement: .navigationBarLeading)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading)
                 { Button { showMenu = true}
-                label: { Image(systemName: "line.3.horizontal")}}
+                    label: { Image(systemName: "line.3.horizontal")}}
+                
+                ToolbarItem(placement: .navigationBarTrailing)
+                { Button { isShowingSheet = true}
+                    label: { Image(systemName: "car.2")}}
             }
+        }.sheet(isPresented: $isShowingSheet, onDismiss: didDismiss)
+        {
+            List
+            {
+                Section(header: Text("Selecione um carro"))
+                {
+                    
+                    Spacer()
+                }
+            }.presentationDetents([.medium, .large])
+            
+            Button("Dispensar", action: { isShowingSheet.toggle() })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
         }
+    }
+    
+    func didDismiss()
+    {
+        // Handle the dismissing action.
     }
 }

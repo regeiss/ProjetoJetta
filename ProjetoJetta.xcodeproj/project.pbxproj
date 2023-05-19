@@ -25,16 +25,17 @@
 		E1BDC6582A1125B200F71A08 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6572A1125B200F71A08 /* RealmSwift */; };
 		E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC65B2A1129C400F71A08 /* VeiculoModel.swift */; };
 		E1BDC65F2A1193E700F71A08 /* VeiculoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */; };
-		E1BDC6622A119F6F00F71A08 /* DetalheListaVeiculoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6612A119F6F00F71A08 /* DetalheListaVeiculoView.swift */; };
+		E1BDC6622A119F6F00F71A08 /* ListaVeiculoDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6612A119F6F00F71A08 /* ListaVeiculoDetalheView.swift */; };
 		E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */; };
 		E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */; };
 		E1BDC66A2A144DF300F71A08 /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */; };
 		E1BDC66D2A14506100F71A08 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66C2A14506100F71A08 /* AppState.swift */; };
 		E1BDC6702A14537A00F71A08 /* RealmUserMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66F2A14537A00F71A08 /* RealmUserMode.swift */; };
 		E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */; };
+		E1BDC6752A16E79F00F71A08 /* FormValidator in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6742A16E79F00F71A08 /* FormValidator */; };
 		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
 		E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857822A0EAD6900D31CD4 /* HeaderView.swift */; };
-		E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */; };
+		E1F857862A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F857852A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,7 @@
 		E1BDC6522A0FDFAD00F71A08 /* AppThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeViewModifier.swift; sourceTree = "<group>"; };
 		E1BDC65B2A1129C400F71A08 /* VeiculoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoModel.swift; sourceTree = "<group>"; };
 		E1BDC65E2A1193E700F71A08 /* VeiculoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoViewModel.swift; sourceTree = "<group>"; };
-		E1BDC6612A119F6F00F71A08 /* DetalheListaVeiculoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheListaVeiculoView.swift; sourceTree = "<group>"; };
+		E1BDC6612A119F6F00F71A08 /* ListaVeiculoDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaVeiculoDetalheView.swift; sourceTree = "<group>"; };
 		E1BDC6632A11A01500F71A08 /* VeiculoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoAction.swift; sourceTree = "<group>"; };
 		E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrator.swift; sourceTree = "<group>"; };
@@ -65,7 +66,7 @@
 		E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaVeiculoScreen.swift; sourceTree = "<group>"; };
 		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E1F857822A0EAD6900D31CD4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoScreen.swift; sourceTree = "<group>"; };
+		E1F857852A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdicaoVeiculoScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				E1BDC6582A1125B200F71A08 /* RealmSwift in Frameworks */,
 				E1BDC6562A1125B200F71A08 /* Realm in Frameworks */,
 				E1BDC62E2A0DB1A300F71A08 /* UIPilot in Frameworks */,
+				E1BDC6752A16E79F00F71A08 /* FormValidator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */,
-				E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */,
+				E1F857852A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -321,7 +323,7 @@
 		E1BDC6602A119F4900F71A08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC6612A119F6F00F71A08 /* DetalheListaVeiculoView.swift */,
+				E1BDC6612A119F6F00F71A08 /* ListaVeiculoDetalheView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +394,7 @@
 				E1BDC62D2A0DB1A300F71A08 /* UIPilot */,
 				E1BDC6552A1125B200F71A08 /* Realm */,
 				E1BDC6572A1125B200F71A08 /* RealmSwift */,
+				E1BDC6742A16E79F00F71A08 /* FormValidator */,
 			);
 			productName = ProjetoJetta;
 			productReference = E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */;
@@ -425,6 +428,7 @@
 			packageReferences = (
 				E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */,
 				E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E1BDC6732A16E79F00F71A08 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */,
 			);
 			productRefGroup = E1BDC60F2A0DA79F00F71A08 /* Products */;
 			projectDirPath = "";
@@ -487,7 +491,7 @@
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
-				E1BDC6622A119F6F00F71A08 /* DetalheListaVeiculoView.swift in Sources */,
+				E1BDC6622A119F6F00F71A08 /* ListaVeiculoDetalheView.swift in Sources */,
 				E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,
 				E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */,
@@ -495,7 +499,7 @@
 				E1BDC6322A0DB28700F71A08 /* AppRoute.swift in Sources */,
 				E1BDC6362A0DB32E00F71A08 /* RootScreen.swift in Sources */,
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
-				E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */,
+				E1F857862A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift in Sources */,
 				E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +735,14 @@
 				kind = branch;
 			};
 		};
+		E1BDC6732A16E79F00F71A08 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Open-Bytes/SwiftUIFormValidator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -748,6 +760,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		E1BDC6742A16E79F00F71A08 /* FormValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1BDC6732A16E79F00F71A08 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */;
+			productName = FormValidator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
