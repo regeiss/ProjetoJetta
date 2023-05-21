@@ -22,7 +22,6 @@ struct DetalheMenuView: View
             RoundedRectangle(cornerRadius: 10)
                 .background(.ultraThickMaterial)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
-                // .opacity(0.4)
                 .onTapGesture { pilot.push(.abastecimento)}
             
             Text(collection.name)

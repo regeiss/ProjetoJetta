@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E193006A2A1838F9009C7879 /* BackGroundColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19300692A1838F9009C7879 /* BackGroundColors.xcassets */; };
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
@@ -30,7 +31,7 @@
 		E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */; };
 		E1BDC66A2A144DF300F71A08 /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */; };
 		E1BDC66D2A14506100F71A08 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66C2A14506100F71A08 /* AppState.swift */; };
-		E1BDC6702A14537A00F71A08 /* RealmUserMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66F2A14537A00F71A08 /* RealmUserMode.swift */; };
+		E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66F2A14537A00F71A08 /* RealmUserModel.swift */; };
 		E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */; };
 		E1BDC6752A16E79F00F71A08 /* FormValidator in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6742A16E79F00F71A08 /* FormValidator */; };
 		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E19300692A1838F9009C7879 /* BackGroundColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BackGroundColors.xcassets; sourceTree = "<group>"; };
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		E1BDC6672A12FDD200F71A08 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrator.swift; sourceTree = "<group>"; };
 		E1BDC66C2A14506100F71A08 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		E1BDC66F2A14537A00F71A08 /* RealmUserMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserMode.swift; sourceTree = "<group>"; };
+		E1BDC66F2A14537A00F71A08 /* RealmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserModel.swift; sourceTree = "<group>"; };
 		E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaVeiculoScreen.swift; sourceTree = "<group>"; };
 		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E1F857822A0EAD6900D31CD4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E193006B2A199E2F009C7879 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E1BDC6052A0DA79F00F71A08 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +153,7 @@
 		E1BDC6212A0DA91000F71A08 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC66E2A14536300F71A08 /* Mode */,
+				E1BDC66E2A14536300F71A08 /* Model */,
 				E1BDC66B2A14505000F71A08 /* AppState */,
 				E1BDC6662A12FDC000F71A08 /* Realm */,
 				E1BDC64E2A0FDF1900F71A08 /* AppTheme */,
@@ -156,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */,
+				E19300692A1838F9009C7879 /* BackGroundColors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,7 +201,6 @@
 		E1BDC6342A0DB31B00F71A08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +276,7 @@
 		E1BDC64C2A0F37E700F71A08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E193006B2A199E2F009C7879 /* View */,
 				E1BDC64D2A0F37F300F71A08 /* Screens */,
 			);
 			path = Home;
@@ -353,12 +364,12 @@
 			path = AppState;
 			sourceTree = "<group>";
 		};
-		E1BDC66E2A14536300F71A08 /* Mode */ = {
+		E1BDC66E2A14536300F71A08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC66F2A14537A00F71A08 /* RealmUserMode.swift */,
+				E1BDC66F2A14537A00F71A08 /* RealmUserModel.swift */,
 			);
-			path = Mode;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E1F857842A0ED46E00D31CD4 /* Veiculo */ = {
@@ -446,6 +457,7 @@
 			files = (
 				E1BDC6242A0DAACD00F71A08 /* .swiftlint.yml in Resources */,
 				E1BDC6282A0DAEE400F71A08 /* Localizable.strings in Resources */,
+				E193006A2A1838F9009C7879 /* BackGroundColors.xcassets in Resources */,
 				E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */,
 				E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */,
 			);
@@ -487,7 +499,7 @@
 				E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */,
 				E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */,
 				E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */,
-				E1BDC6702A14537A00F71A08 /* RealmUserMode.swift in Sources */,
+				E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */,
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,

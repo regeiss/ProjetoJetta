@@ -41,6 +41,7 @@ struct RootScreen: View
                 }
             }.gesture(drag)
             .modifier(DarkModeViewModifier())
+            .background {Color("backGroundMain")}
         }
     }
 }

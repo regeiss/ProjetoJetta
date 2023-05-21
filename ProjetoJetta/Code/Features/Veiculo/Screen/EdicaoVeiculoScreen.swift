@@ -15,9 +15,9 @@ struct EdicaoVeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = VeiculoViewModel()
-    var veiculo: Veiculo
     @ObservedObject var formInfo = CarroFormInfo()
     @State var isSaveDisabled: Bool = true
+    var veiculo: Veiculo
     var isEdit: Bool
     
     var body: some View

@@ -62,8 +62,7 @@ struct HomeScreen: View
                 { Button { isShowingSheet = true}
                     label: { Image(systemName: "car.2")}}
             }
-        }.edgesIgnoringSafeArea(.all)
-        .background {Color.teal.opacity(0.8).ignoresSafeArea()}
+        }
         .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss)
         {
             List

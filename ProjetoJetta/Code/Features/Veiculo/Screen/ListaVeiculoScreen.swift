@@ -12,7 +12,7 @@ import UIPilot
 struct ListaVeiculoScreen: View
 {
     @ObservedResults(Veiculo.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var veiculos
-    @EnvironmentObject var state: AppState
+    // @EnvironmentObject var state: AppState
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     
     var body: some View
@@ -20,7 +20,10 @@ struct ListaVeiculoScreen: View
         List
         {
             ForEach(veiculos) { veiculo in
-                ListaVeiculoDetalheView(veiculo: veiculo)
+                HStack
+                {
+                    ListaVeiculoDetalheView(veiculo: veiculo)
+                }
             }
         }.navigationBarTitle("Veículos", displayMode: .automatic)
             .toolbar { ToolbarItem(placement: .navigationBarTrailing)

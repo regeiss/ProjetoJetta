@@ -9,12 +9,38 @@ import SwiftUI
 import UIPilot
 import RealmSwift
 
-let app = App(id: "tasktracker-xxxxx")
+let app = App(id: "xxxxx")
+
+class AppDelegate: NSObject, UIApplicationDelegate
+{
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool
+    {
+            print("Migration Code Goes here")
+            configure()
+            return true
+        }
+    
+    func configure()
+    {
+            var config = Realm.Configuration(
+                schemaVersion: 1,
+                deleteRealmIfMigrationNeeded: true
+            )
+            
+            config.shouldCompactOnLaunch = { totalBytes, usedBytes in
+                let oneHundredMB = 100 * 1024 * 1024
+                return (totalBytes > oneHundredMB) && (Double(usedBytes) / Double(totalBytes)) < 0.5
+            }
+            
+            Realm.Configuration.defaultConfiguration = config
+        }
+}
 
 @main
 @available(iOS 16.0, *)
 struct ProjetoJettaApp: SwiftUI.App
 {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) private var scenePhase
     @StateObject var pilot = UIPilot(initial: AppRoute.root)
     
@@ -26,7 +52,6 @@ struct ProjetoJettaApp: SwiftUI.App
                 switch route
                 {
                 case .root: RootScreen(showMenu: false)
-                        .environment(\.realmConfiguration, RealmConfig.self.configuration)
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
@@ -41,7 +66,7 @@ struct ProjetoJettaApp: SwiftUI.App
             {
             case .active:
                 print("active")
-                print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+                // print(Realm.Configuration.defaultConfiguration.fileURL as Any)
             case .inactive:
                 print("inactive")
             case .background:
