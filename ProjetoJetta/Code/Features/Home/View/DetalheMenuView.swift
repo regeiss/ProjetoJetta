@@ -22,7 +22,12 @@ struct DetalheMenuView: View
             RoundedRectangle(cornerRadius: 10)
                 .background(.ultraThickMaterial)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
-                .onTapGesture { pilot.push(.abastecimento)}
+                .onTapGesture {
+                    if collection.name == "Abastecimento"
+                    {
+                        pilot.push(.abastecimento)
+                    }
+                }
             
             Text(collection.name)
                 .font(.system(.largeTitle, design: .rounded))

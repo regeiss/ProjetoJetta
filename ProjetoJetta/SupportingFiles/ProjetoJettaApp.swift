@@ -55,8 +55,10 @@ struct ProjetoJettaApp: SwiftUI.App
                 case .login: EmptyView()
                 case .browser: EmptyView()
                 case .settings: SettingsView()
-                case .abastecimento: ListaVeiculoScreen()
-                case .edicaoVeiculo: EdicaoVeiculoScreen(veiculo: Veiculo(), isEdit: true)
+                case .veiculo: ListaVeiculoScreen()
+                case .edicaoVeiculo(let veiculo): EdicaoVeiculoScreen(veiculo: veiculo)
+                case .abastecimento: ListaAbastecimentoScreen()
+                case .edicaoAbastecimento(abastecimento: let abastecimento): ListaAbastecimentoScreen()
                 }
             }
         }
@@ -66,7 +68,7 @@ struct ProjetoJettaApp: SwiftUI.App
             {
             case .active:
                 print("active")
-                // print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+                print(Realm.Configuration.defaultConfiguration.fileURL as Any)
             case .inactive:
                 print("inactive")
             case .background:

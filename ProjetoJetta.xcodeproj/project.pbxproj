@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E193006A2A1838F9009C7879 /* BackGroundColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19300692A1838F9009C7879 /* BackGroundColors.xcassets */; };
+		E193006F2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193006E2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift */; };
+		E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300712A1AD987009C7879 /* AbastecimentoModel.swift */; };
+		E19300752A1ADD9C009C7879 /* AbastecimentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300742A1ADD9C009C7879 /* AbastecimentoViewModel.swift */; };
+		E19300772A1ADF9A009C7879 /* ListaAbastecimentoDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300762A1ADF9A009C7879 /* ListaAbastecimentoDetalheView.swift */; };
+		E193007C2A1AE6C8009C7879 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193007B2A1AE6C8009C7879 /* StringExtension.swift */; };
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
@@ -41,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		E19300692A1838F9009C7879 /* BackGroundColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BackGroundColors.xcassets; sourceTree = "<group>"; };
+		E193006E2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAbastecimentoScreen.swift; sourceTree = "<group>"; };
+		E19300712A1AD987009C7879 /* AbastecimentoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoModel.swift; sourceTree = "<group>"; };
+		E19300742A1ADD9C009C7879 /* AbastecimentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoViewModel.swift; sourceTree = "<group>"; };
+		E19300762A1ADF9A009C7879 /* ListaAbastecimentoDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAbastecimentoDetalheView.swift; sourceTree = "<group>"; };
+		E193007B2A1AE6C8009C7879 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -92,6 +102,64 @@
 				E1BDC63D2A0DB5F300F71A08 /* DetalheMenuView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E193006C2A1A748B009C7879 /* Abastecimento */ = {
+			isa = PBXGroup;
+			children = (
+				E19300702A1AD972009C7879 /* Model */,
+				E193006D2A1A7497009C7879 /* Screen */,
+				E19300782A1ADFA2009C7879 /* View */,
+				E19300732A1ADD35009C7879 /* ViewModel */,
+			);
+			path = Abastecimento;
+			sourceTree = "<group>";
+		};
+		E193006D2A1A7497009C7879 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E193006E2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E19300702A1AD972009C7879 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E19300712A1AD987009C7879 /* AbastecimentoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E19300732A1ADD35009C7879 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E19300742A1ADD9C009C7879 /* AbastecimentoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E19300782A1ADFA2009C7879 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E19300762A1ADF9A009C7879 /* ListaAbastecimentoDetalheView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E19300792A1AE531009C7879 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E193007A2A1AE6A6009C7879 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E193007B2A1AE6C8009C7879 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E1BDC6052A0DA79F00F71A08 = {
@@ -241,11 +309,13 @@
 		E1BDC6432A0DB93500F71A08 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E19300792A1AE531009C7879 /* Common */,
+				E193006C2A1A748B009C7879 /* Abastecimento */,
 				E1BDC64C2A0F37E700F71A08 /* Home */,
-				E1F857842A0ED46E00D31CD4 /* Veiculo */,
-				E1BDC6452A0DB98D00F71A08 /* Settings */,
-				E1BDC62F2A0DB23E00F71A08 /* Routing */,
 				E1BDC6332A0DB31200F71A08 /* Root */,
+				E1BDC62F2A0DB23E00F71A08 /* Routing */,
+				E1BDC6452A0DB98D00F71A08 /* Settings */,
+				E1F857842A0ED46E00D31CD4 /* Veiculo */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -253,6 +323,7 @@
 		E1BDC6442A0DB96700F71A08 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E193007A2A1AE6A6009C7879 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -502,8 +573,11 @@
 				E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */,
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
+				E19300772A1ADF9A009C7879 /* ListaAbastecimentoDetalheView.swift in Sources */,
+				E19300752A1ADD9C009C7879 /* AbastecimentoViewModel.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
 				E1BDC6622A119F6F00F71A08 /* ListaVeiculoDetalheView.swift in Sources */,
+				E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */,
 				E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,
 				E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */,
@@ -513,6 +587,8 @@
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
 				E1F857862A0ED48E00D31CD4 /* EdicaoVeiculoScreen.swift in Sources */,
 				E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */,
+				E193007C2A1AE6C8009C7879 /* StringExtension.swift in Sources */,
+				E193006F2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

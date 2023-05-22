@@ -14,5 +14,7 @@ enum AppRoute: Equatable
     case browser
     case settings
     case abastecimento
-    case edicaoVeiculo(Veiculo, isEdit: Bool)
+    case veiculo
+    case edicaoVeiculo(veiculo: Veiculo)
+    case edicaoAbastecimento(abastecimento: Abastecimento)
 }

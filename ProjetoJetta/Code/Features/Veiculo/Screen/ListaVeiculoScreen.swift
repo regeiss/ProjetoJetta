@@ -12,7 +12,6 @@ import UIPilot
 struct ListaVeiculoScreen: View
 {
     @ObservedResults(Veiculo.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var veiculos
-    // @EnvironmentObject var state: AppState
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     
     var body: some View
@@ -25,12 +24,13 @@ struct ListaVeiculoScreen: View
                     ListaVeiculoDetalheView(veiculo: veiculo)
                 }
             }
-        }.navigationBarTitle("Veículos", displayMode: .automatic)
-            .toolbar { ToolbarItem(placement: .navigationBarTrailing)
-                { Button {
-                    pilot.push(.edicaoVeiculo(Veiculo(), isEdit: false))
-                }
-                    label: { Image(systemName: "plus")}}
+        }
+        .navigationBarTitle("Veículos", displayMode: .automatic)
+        .toolbar { ToolbarItem(placement: .navigationBarTrailing)
+            { Button {
+                pilot.push(.edicaoVeiculo(veiculo: Veiculo()))
             }
+                label: { Image(systemName: "plus")}}
+        }
     }
 }

@@ -17,8 +17,9 @@ struct EdicaoVeiculoScreen: View
     @StateObject private var viewModel = VeiculoViewModel()
     @ObservedObject var formInfo = CarroFormInfo()
     @State var isSaveDisabled: Bool = true
-    var veiculo: Veiculo
-    var isEdit: Bool
+    
+    let veiculo: Veiculo
+    let isEdit: Bool = true
     
     var body: some View
     {
@@ -37,7 +38,10 @@ struct EdicaoVeiculoScreen: View
                 }
             }
         }.onAppear {
-            if isEdit {
+            print(isEdit)
+            print(veiculo)
+            if isEdit
+            {
                 formInfo.nome = veiculo.name
                 formInfo.marca = veiculo.marca ?? ""
                 formInfo.modelo = veiculo.modelo ?? ""
