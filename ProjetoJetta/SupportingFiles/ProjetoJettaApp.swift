@@ -47,22 +47,24 @@ struct ProjetoJettaApp: SwiftUI.App
     {
         WindowGroup
         {
-            UIPilotHost(pilot) { route in
-                switch route
-                {
-                case .root: RootScreen(showMenu: false)
-                case .login: EmptyView()
-                case .browser: EmptyView()
-                case .settings: SettingsView()
-                case .veiculo: ListaVeiculoScreen()
-                case .edicaoVeiculo(let veiculo): VeiculoScreen(veiculo: veiculo)
-                case .abastecimento: ListaAbastecimentoScreen()
-                case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
-                case .cadastros: CadastrosScreen()
-                case .posto: ListaPostoScreen()
-                case .testeView: TesteView()
-                }
-            }
+            ZStack {
+                Color("backGroundMain").edgesIgnoringSafeArea(.all)
+                UIPilotHost(pilot) { route in
+                    switch route
+                    {
+                    case .root: RootScreen(showMenu: false)
+                    case .login: EmptyView()
+                    case .browser: EmptyView()
+                    case .settings: SettingsView()
+                    case .veiculo: ListaVeiculoScreen()
+                    case .edicaoVeiculo(let veiculo): VeiculoScreen(veiculo: veiculo)
+                    case .abastecimento: ListaAbastecimentoScreen()
+                    case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
+                    case .cadastros: CadastrosScreen()
+                    case .posto: ListaPostoScreen()
+                    case .testeView: TesteView()
+                    }
+                }}
         }
         .onChange(of: scenePhase)
         { phase in

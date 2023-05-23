@@ -20,7 +20,7 @@ struct DetalheMenuView: View
         ZStack(alignment: .bottomTrailing)
         {
             RoundedRectangle(cornerRadius: 10)
-                .background(.ultraThickMaterial)
+                .fill(.ultraThickMaterial)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
                 .onTapGesture {
                     if collection.name == "Abastecimento"
