@@ -13,7 +13,8 @@ class Posto: Object, ObjectKeyIdentifiable
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var nome: String
     @Persisted var logo: Data
-
+    @Persisted var abastecimentoPosto: List<Abastecimento>
+    
     convenience init(nome: String, logo: Data)
     {
         self.init()

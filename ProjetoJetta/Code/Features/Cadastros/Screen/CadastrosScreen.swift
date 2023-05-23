@@ -20,25 +20,17 @@ struct CadastrosScreen: View
             VStack
             {
                 DetalheCadastroView(titulo: "Categorias")
-                    .onTapGesture
-                    {
-                        pilot.push(.root)
-                    }
+                    .onTapGesture {
+                    pilot.push(.root)}
                 DetalheCadastroView(titulo: "Serviços")
-                    .onTapGesture
-                    {
-                        pilot.push(.root)
-                    }
+                    .onTapGesture {
+                    pilot.push(.testeView)}
                 DetalheCadastroView(titulo: "Veículos")
-                    .onTapGesture
-                    {
-                        pilot.push(.veiculo)
-                    }
+                    .onTapGesture {
+                    pilot.push(.veiculo)}
                 DetalheCadastroView(titulo: "Postos")
-                    .onTapGesture
-                    {
-                        pilot.push(.root)
-                    }
+                    .onTapGesture {
+                    pilot.push(.posto)}
                 
             }.padding()
             Spacer()

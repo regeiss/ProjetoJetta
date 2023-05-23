@@ -11,7 +11,7 @@ import RealmSwift
 class Abastecimento: Object, ObjectKeyIdentifiable
 {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var km: Int32
+    @Persisted var kms: Int32
     @Persisted var data: Date
     @Persisted var litros: Double
     @Persisted var valorLitro: Double
@@ -19,13 +19,13 @@ class Abastecimento: Object, ObjectKeyIdentifiable
     @Persisted var completo: Bool
     @Persisted var media: Double
     // Relacionamentos
-//    @Persisted var doPosto: Posto?
-//    @Persisted var doCarro: Veiculo?
+    @Persisted(originProperty: "abastecimentoPosto") var doPosto: LinkingObjects<Posto>
+    @Persisted(originProperty: "abastecimentoVeiculo") var doVeiculo: LinkingObjects<Veiculo>
     
-    convenience init(km: Int32, data: Date, valorLitro: Double, valorTotal: Double, completo: Bool, media: Double)
+    convenience init(kms: Int32, data: Date, valorLitro: Double, valorTotal: Double, completo: Bool, media: Double)
     {
         self.init()
-        self.km = km
+        self.kms = kms
         self.data = data
         self.valorLitro = valorLitro
         self.valorTotal = valorTotal

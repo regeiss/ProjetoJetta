@@ -1,0 +1,37 @@
+//
+//  ListaPostoScreen.swift
+//  ProjetoJetta
+//
+//  Created by Roberto Edgar Geiss on 23/05/23.
+//
+
+import SwiftUI
+import RealmSwift
+import UIPilot
+
+@available(iOS 16.0, *)
+struct ListaPostoScreen: View
+{
+    @ObservedResults(Posto.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var postos
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
+    
+    var body: some View
+    {
+        List
+        {
+            ForEach(postos) { posto in
+                HStack
+                {
+                    ListaPostoDetalheView(posto: posto)
+                }
+            }.onDelete(perform: $postos.remove(atOffsets:))
+        }
+        .navigationBarTitle("Abastecimento", displayMode: .automatic)
+        .toolbar { ToolbarItem(placement: .navigationBarTrailing)
+            { Button {
+                pilot.push(.edicaoAbastecimento(abastecimento: Abastecimento()))
+            }
+                label: { Image(systemName: "plus")}}
+        }
+    }
+}

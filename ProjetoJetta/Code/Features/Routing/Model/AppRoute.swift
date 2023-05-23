@@ -18,4 +18,6 @@ enum AppRoute: Equatable
     case veiculo
     case edicaoVeiculo(veiculo: Veiculo)
     case edicaoAbastecimento(abastecimento: Abastecimento)
+    case posto
+    case testeView
 }

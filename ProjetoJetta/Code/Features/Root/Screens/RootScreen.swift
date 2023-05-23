@@ -28,7 +28,7 @@ struct RootScreen: View
         { geometry in
             ZStack(alignment: .leading)
             {
-                Color("backGroundMain").edgesIgnoringSafeArea(.all)
+                // Color("backGroundMain").edgesIgnoringSafeArea(.all)
                 HomeScreen(showMenu: $showMenu)
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: self.showMenu ? geometry.size.width / 2 : 0)

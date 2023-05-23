@@ -37,9 +37,8 @@ struct VeiculoScreen: View
                     TextField("ano", text: $formInfo.ano)
                 }
             }
-        }.onAppear {
-            print(isEdit)
-            print(veiculo)
+        }.onAppear
+        {
             if isEdit
             {
                 formInfo.nome = veiculo.name
