@@ -22,18 +22,17 @@ class AppDelegate: NSObject, UIApplicationDelegate
     
     func configure()
     {
-            var config = Realm.Configuration(
-                schemaVersion: 1,
-                deleteRealmIfMigrationNeeded: true
-            )
-            
-            config.shouldCompactOnLaunch = { totalBytes, usedBytes in
-                let oneHundredMB = 100 * 1024 * 1024
-                return (totalBytes > oneHundredMB) && (Double(usedBytes) / Double(totalBytes)) < 0.5
-            }
-            
-            Realm.Configuration.defaultConfiguration = config
+        var config = Realm.Configuration(
+            schemaVersion: 1,
+            deleteRealmIfMigrationNeeded: true
+        )
+        
+        config.shouldCompactOnLaunch = { totalBytes, usedBytes in
+            let oneHundredMB = 100 * 1024 * 1024
+            return (totalBytes > oneHundredMB) && (Double(usedBytes) / Double(totalBytes)) < 0.5
         }
+        Realm.Configuration.defaultConfiguration = config
+    }
 }
 
 @main
@@ -56,9 +55,10 @@ struct ProjetoJettaApp: SwiftUI.App
                 case .browser: EmptyView()
                 case .settings: SettingsView()
                 case .veiculo: ListaVeiculoScreen()
-                case .edicaoVeiculo(let veiculo): EdicaoVeiculoScreen(veiculo: veiculo)
+                case .edicaoVeiculo(let veiculo): VeiculoScreen(veiculo: veiculo)
                 case .abastecimento: ListaAbastecimentoScreen()
-                case .edicaoAbastecimento(abastecimento: let abastecimento): ListaAbastecimentoScreen()
+                case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
+                case .cadastros: CadastrosScreen()
                 }
             }
         }

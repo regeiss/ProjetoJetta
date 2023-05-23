@@ -19,7 +19,7 @@ struct ListaAbastecimentoDetalheView: View
     {
         HStack
         {
-            Text((abastecimento.data ?? Date()).formatted(date: .numeric, time: .omitted))
+            Text((abastecimento.data).formatted(date: .numeric, time: .omitted))
             Text(String(format: "%.2f", abastecimento.valorLitro).toCurrencyFormat())
             Text(String(format: "%.2f", abastecimento.valorTotal).toCurrencyFormat())
         }.onTapGesture {

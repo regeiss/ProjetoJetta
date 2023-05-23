@@ -24,6 +24,7 @@ struct ListaVeiculoScreen: View
                     ListaVeiculoDetalheView(veiculo: veiculo)
                 }
             }
+            .onDelete(perform: $veiculos.remove(atOffsets:))
         }
         .navigationBarTitle("Veículos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)

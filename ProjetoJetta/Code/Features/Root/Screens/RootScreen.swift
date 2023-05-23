@@ -16,7 +16,6 @@ struct RootScreen: View
     
     var body: some View
     {
-        
         let drag = DragGesture().onEnded
         {
             if $0.translation.width < -100
@@ -29,6 +28,7 @@ struct RootScreen: View
         { geometry in
             ZStack(alignment: .leading)
             {
+                Color("backGroundMain").edgesIgnoringSafeArea(.all)
                 HomeScreen(showMenu: $showMenu)
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: self.showMenu ? geometry.size.width / 2 : 0)
@@ -40,8 +40,7 @@ struct RootScreen: View
                         .frame(width: geometry.size.width / 2)
                 }
             }.gesture(drag)
-            .modifier(DarkModeViewModifier())
-            .background {Color("backGroundMain")}
+                .modifier(DarkModeViewModifier())
         }
     }
 }

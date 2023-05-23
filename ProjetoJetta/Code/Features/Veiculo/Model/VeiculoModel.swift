@@ -19,7 +19,7 @@ class Veiculo: Object, ObjectKeyIdentifiable
     @Persisted var chassis: String?
     @Persisted var ativo: Bool = false
     @Persisted var padrao: Bool = false
-    @Persisted(originProperty: "veiculos") var doPerfil: LinkingObjects<Perfil>
+    // @Persisted(originProperty: "doPerfil") var doPerfil: LinkingObjects<Perfil>
 
     convenience init(name: String, marca: String, modelo: String, ano: Int, placa: String, chassis: String, ativo: Bool, padrao: Bool )
     {

@@ -11,7 +11,7 @@ import RealmSwift
 import FormValidator
 
 @available(iOS 16.0, *)
-struct EdicaoVeiculoScreen: View
+struct VeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = VeiculoViewModel()

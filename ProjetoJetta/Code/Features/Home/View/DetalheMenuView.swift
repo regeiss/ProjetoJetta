@@ -27,6 +27,11 @@ struct DetalheMenuView: View
                     {
                         pilot.push(.abastecimento)
                     }
+                    
+                    if collection.name == "Cadastros"
+                    {
+                        pilot.push(.cadastros)
+                    }
                 }
             
             Text(collection.name)
