@@ -12,6 +12,8 @@ class VeiculoViewModel: ObservableObject
 {
     func saveObject(veiculo: Veiculo, isEdit: Bool)
     {
+        // let realm = DatabaseManager.sharedInstance
+        
         do
         {
             let realm = try Realm()

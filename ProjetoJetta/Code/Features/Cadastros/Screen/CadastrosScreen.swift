@@ -15,8 +15,9 @@ struct CadastrosScreen: View
     
     var body: some View
     {
-        VStack(alignment: .leading)
+        ZStack(alignment: .leading)
         {
+            Color("backGroundMain").edgesIgnoringSafeArea(.all)
             VStack
             {
                 DetalheCadastroView(titulo: "Categorias")
@@ -24,16 +25,16 @@ struct CadastrosScreen: View
                     pilot.push(.root)}
                 DetalheCadastroView(titulo: "Serviços")
                     .onTapGesture {
-                    pilot.push(.testeView)}
+                    pilot.push(.root)}
                 DetalheCadastroView(titulo: "Veículos")
                     .onTapGesture {
                     pilot.push(.veiculo)}
                 DetalheCadastroView(titulo: "Postos")
                     .onTapGesture {
                     pilot.push(.posto)}
-                
+                Spacer()
             }.padding()
-            Spacer()
+            
         }
     }
 }

@@ -26,7 +26,7 @@ struct ListaPostoScreen: View
                 }
             }.onDelete(perform: $postos.remove(atOffsets:))
         }
-        .navigationBarTitle("Abastecimento", displayMode: .automatic)
+        .navigationBarTitle("Postos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {
                 pilot.push(.edicaoAbastecimento(abastecimento: Abastecimento()))
