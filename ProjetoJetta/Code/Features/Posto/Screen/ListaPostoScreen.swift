@@ -24,12 +24,13 @@ struct ListaPostoScreen: View
                 {
                     ListaPostoDetalheView(posto: posto)
                 }
-            }.onDelete(perform: $postos.remove(atOffsets:))
+            }
+            .onDelete(perform: $postos.remove(atOffsets:))
         }
         .navigationBarTitle("Postos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                pilot.push(.edicaoPosto(posto: Posto()))
+                pilot.push(.adicaoPosto(posto: Posto()))
             }
                 label: { Image(systemName: "plus")}}
         }

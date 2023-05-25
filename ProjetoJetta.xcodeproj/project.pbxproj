@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E154DD222A1FB9CD002C23A0 /* RootDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154DD212A1FB9CD002C23A0 /* RootDetalheView.swift */; };
 		E193006A2A1838F9009C7879 /* BackGroundColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19300692A1838F9009C7879 /* BackGroundColors.xcassets */; };
 		E193006F2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193006E2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift */; };
 		E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300712A1AD987009C7879 /* AbastecimentoModel.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E154DD212A1FB9CD002C23A0 /* RootDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDetalheView.swift; sourceTree = "<group>"; };
 		E19300692A1838F9009C7879 /* BackGroundColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BackGroundColors.xcassets; sourceTree = "<group>"; };
 		E193006E2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAbastecimentoScreen.swift; sourceTree = "<group>"; };
 		E19300712A1AD987009C7879 /* AbastecimentoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoModel.swift; sourceTree = "<group>"; };
@@ -211,10 +213,10 @@
 		E193007F2A1C2C24009C7879 /* Posto */ = {
 			isa = PBXGroup;
 			children = (
-				E19300982A1EEDBE009C7879 /* ViewModel */,
-				E1DF6AC02A1D2BA30028A8FA /* View */,
-				E1DF6ABD2A1D23CD0028A8FA /* Screen */,
 				E19300802A1C2C2D009C7879 /* Model */,
+				E1DF6ABD2A1D23CD0028A8FA /* Screen */,
+				E1DF6AC02A1D2BA30028A8FA /* View */,
+				E19300982A1EEDBE009C7879 /* ViewModel */,
 			);
 			path = Posto;
 			sourceTree = "<group>";
@@ -401,6 +403,7 @@
 		E1BDC6342A0DB31B00F71A08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E154DD212A1FB9CD002C23A0 /* RootDetalheView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				E1BDC6322A0DB28700F71A08 /* AppRoute.swift in Sources */,
 				E19300822A1C2C49009C7879 /* PostoModel.swift in Sources */,
 				E1BDC6362A0DB32E00F71A08 /* RootScreen.swift in Sources */,
+				E154DD222A1FB9CD002C23A0 /* RootDetalheView.swift in Sources */,
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
 				E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */,
 				E1DF6AC22A1D2BB70028A8FA /* ListaDetalhePostoView.swift in Sources */,

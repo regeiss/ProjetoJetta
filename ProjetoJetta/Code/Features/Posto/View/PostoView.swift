@@ -19,7 +19,7 @@ struct PostoView: View
     @State var isSaveDisabled: Bool = true
     
     let posto: Posto
-    let isEdit: Bool = true
+    let isEdit: Bool
     
     var body: some View
     {
@@ -38,6 +38,7 @@ struct PostoView: View
             if isEdit
             {
                 formInfo.nome = posto.nome
+                formInfo.logo = posto.logo
             }
         }
         .navigationTitle("Postos")
@@ -51,21 +52,11 @@ struct PostoView: View
                 label: { Text("Cancelar")}}
             ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                save()
+                viewModel.saveObject(posto: posto, isEdit: isEdit, nome: formInfo.nome, logo: formInfo.logo)
                 pilot.pop(animated: .random())
             }
                 label: { Text("OK")}}
         }
-    }
-    
-    func save()
-    {
-        let posto = Posto()
-        
-        posto.nome = formInfo.nome
-        posto.logo = formInfo.logo
-
-        viewModel.saveObject(posto: posto, isEdit: isEdit)
     }
 }
 

@@ -9,16 +9,24 @@ import Foundation
 
 enum AppRoute: Equatable
 {
+    // TODO: ajustar os nomes de acordo com a funcao
     case root
     case login
     case browser
     case settings
+    //
     case abastecimento
+    case edicaoAbastecimento(abastecimento: Abastecimento)
+    //
     case cadastros
+    //
     case veiculo
     case edicaoVeiculo(veiculo: Veiculo)
-    case edicaoAbastecimento(abastecimento: Abastecimento)
-    case posto
+    
+    //
+    case listaPosto
+    case adicaoPosto(posto: Posto)
     case edicaoPosto(posto: Posto)
+    // 
     case testeView
 }

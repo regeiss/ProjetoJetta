@@ -31,7 +31,7 @@ struct CadastrosScreen: View
                     pilot.push(.veiculo)}
                 DetalheCadastroView(titulo: "Postos")
                     .onTapGesture {
-                    pilot.push(.posto)}
+                    pilot.push(.listaPosto)}
                 Spacer()
             }.padding()
             

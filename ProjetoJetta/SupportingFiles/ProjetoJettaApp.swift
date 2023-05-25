@@ -47,7 +47,8 @@ struct ProjetoJettaApp: SwiftUI.App
     {
         WindowGroup
         {
-            ZStack {
+            ZStack
+            {
                 Color("backGroundMain").edgesIgnoringSafeArea(.all)
                 UIPilotHost(pilot) { route in
                     switch route
@@ -61,8 +62,9 @@ struct ProjetoJettaApp: SwiftUI.App
                     case .abastecimento: ListaAbastecimentoScreen()
                     case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
                     case .cadastros: CadastrosScreen()
-                    case .posto: ListaPostoScreen()
-                    case .edicaoPosto(let posto): PostoView(posto: posto)
+                    case .listaPosto: ListaPostoScreen()
+                    case .adicaoPosto: PostoView(posto: Posto(), isEdit: false)
+                    case .edicaoPosto(let posto): PostoView(posto: posto, isEdit: true)
                     case .testeView: TesteView()
                     }
                 }}

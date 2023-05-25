@@ -19,9 +19,10 @@ struct ListaPostoDetalheView: View
         HStack
         {
             Text(posto.nome)
+            Text(posto.logo)
         }
-//        .onTapGesture {
-//            pilot.push(.edicaoVeiculo(veiculo: veiculo))
-//        }
+        .onTapGesture {
+            pilot.push(.edicaoPosto(posto: posto))
+        }
     }
 }
