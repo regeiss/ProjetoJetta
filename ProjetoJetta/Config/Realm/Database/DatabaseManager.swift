@@ -7,13 +7,3 @@
 
 import Foundation
 import RealmSwift
-
-//class DatabaseManager
-//{
-//    private let realm: Realm
-//    public static let sharedInstance = DatabaseManager()
-//
-////    private init() {
-////        realm = try Realm()
-////    }
-//}

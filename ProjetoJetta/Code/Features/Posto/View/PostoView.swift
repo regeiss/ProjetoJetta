@@ -14,8 +14,8 @@ import FormValidator
 struct PostoView: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
-    @StateObject private var viewModel = VeiculoViewModel()
-    @ObservedObject var formInfo = CarroFormInfo()
+    @StateObject private var viewModel = PostoViewModel()
+    @ObservedObject var formInfo = PostoFormInfo()
     @State var isSaveDisabled: Bool = true
     
     let posto: Posto
@@ -23,6 +23,56 @@ struct PostoView: View
     
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack
+        {
+            Form
+            {
+                Section
+                {
+                    TextField("nome", text: $formInfo.nome)
+                    TextField("logo", text: $formInfo.logo)
+                }
+            }
+        }.onAppear
+        {
+            if isEdit
+            {
+                formInfo.nome = posto.nome
+            }
+        }
+        .navigationTitle("Postos")
+        .navigationBarTitleDisplayMode(.automatic)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading)
+            { Button {
+                pilot.pop(animated: .random())
+            }
+                label: { Text("Cancelar")}}
+            ToolbarItem(placement: .navigationBarTrailing)
+            { Button {
+                save()
+                pilot.pop(animated: .random())
+            }
+                label: { Text("OK")}}
+        }
     }
+    
+    func save()
+    {
+        let posto = Posto()
+        
+        posto.nome = formInfo.nome
+        posto.logo = formInfo.logo
+
+        viewModel.saveObject(posto: posto, isEdit: isEdit)
+    }
+}
+
+class PostoFormInfo: ObservableObject
+{
+    @Published var nome: String = ""
+    @Published var logo: String = ""
+    
+    let regexNumerico: String =  "[0-9[\\b]]+"
 }

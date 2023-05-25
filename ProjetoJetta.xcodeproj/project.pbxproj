@@ -21,6 +21,7 @@
 		E19300922A1C4AC7009C7879 /* ListaPerfilDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300912A1C4AC7009C7879 /* ListaPerfilDetalheView.swift */; };
 		E19300942A1C4AE0009C7879 /* PerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300932A1C4AE0009C7879 /* PerfilViewModel.swift */; };
 		E19300972A1D9160009C7879 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300962A1D9160009C7879 /* DatabaseManager.swift */; };
+		E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300992A1EEE35009C7879 /* PostoViewModel.swift */; };
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		E19300912A1C4AC7009C7879 /* ListaPerfilDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPerfilDetalheView.swift; sourceTree = "<group>"; };
 		E19300932A1C4AE0009C7879 /* PerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewModel.swift; sourceTree = "<group>"; };
 		E19300962A1D9160009C7879 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		E19300992A1EEE35009C7879 /* PostoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoViewModel.swift; sourceTree = "<group>"; };
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		E193007F2A1C2C24009C7879 /* Posto */ = {
 			isa = PBXGroup;
 			children = (
+				E19300982A1EEDBE009C7879 /* ViewModel */,
 				E1DF6AC02A1D2BA30028A8FA /* View */,
 				E1DF6ABD2A1D23CD0028A8FA /* Screen */,
 				E19300802A1C2C2D009C7879 /* Model */,
@@ -281,6 +284,14 @@
 				E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		E19300982A1EEDBE009C7879 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E19300992A1EEE35009C7879 /* PostoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E1BDC6052A0DA79F00F71A08 = {
@@ -740,6 +751,7 @@
 				E19300942A1C4AE0009C7879 /* PerfilViewModel.swift in Sources */,
 				E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */,
 				E193007C2A1AE6C8009C7879 /* StringExtension.swift in Sources */,
+				E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */,
 				E193006F2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

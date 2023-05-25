@@ -40,8 +40,10 @@ struct RootScreen: View
                     SideMenuView(showMenu: $showMenu)
                         .frame(width: geometry.size.width / 2)
                 }
-            }.gesture(drag)
-                .modifier(DarkModeViewModifier())
+            }
+            // .toolbar(self.showMenu ? .hidden : .visible)
+            .gesture(drag)
+            .modifier(DarkModeViewModifier())
         }
     }
 }

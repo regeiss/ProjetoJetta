@@ -62,6 +62,7 @@ struct ProjetoJettaApp: SwiftUI.App
                     case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
                     case .cadastros: CadastrosScreen()
                     case .posto: ListaPostoScreen()
+                    case .edicaoPosto(let posto): PostoView(posto: posto)
                     case .testeView: TesteView()
                     }
                 }}

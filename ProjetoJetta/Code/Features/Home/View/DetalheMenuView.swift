@@ -13,14 +13,14 @@ struct DetalheMenuView: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     var collection: Collections
-    let height: CGFloat = 120
+    let height: CGFloat = 130
     
     var body: some View
     {
         ZStack(alignment: .bottomTrailing)
         {
             RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThickMaterial)
+                .fill(.ultraThinMaterial)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
                 .onTapGesture {
                     if collection.name == "Abastecimento"

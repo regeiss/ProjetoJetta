@@ -29,7 +29,7 @@ struct ListaPostoScreen: View
         .navigationBarTitle("Postos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                pilot.push(.edicaoAbastecimento(abastecimento: Abastecimento()))
+                pilot.push(.edicaoPosto(posto: Posto()))
             }
                 label: { Image(systemName: "plus")}}
         }

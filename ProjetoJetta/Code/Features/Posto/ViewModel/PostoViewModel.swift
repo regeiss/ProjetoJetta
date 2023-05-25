@@ -1,23 +1,23 @@
 //
-//  VeiculoViewModel.swift
+//  PostoViewModel.swift
 //  ProjetoJetta
 //
-//  Created by Roberto Edgar Geiss on 14/05/23.
+//  Created by Roberto Edgar Geiss on 24/05/23.
 //
 
 import Foundation
 import RealmSwift
 
-class VeiculoViewModel: ObservableObject
+class PostoViewModel: ObservableObject
 {
-    func saveObject(veiculo: Veiculo, isEdit: Bool)
+    func saveObject(posto: Posto, isEdit: Bool)
     {
         do
         {
             let realm = try Realm()
             try realm.write
             {
-                realm.add(veiculo)
+                realm.add(posto)
             }
         }
         catch let error as NSError

@@ -15,7 +15,7 @@ struct VeiculoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = VeiculoViewModel()
-    @ObservedObject var formInfo = CarroFormInfo()
+    @ObservedObject var formInfo = VeiculoFormInfo()
     @State var isSaveDisabled: Bool = true
     
     let veiculo: Veiculo
@@ -83,7 +83,7 @@ struct VeiculoScreen: View
     }
 }
 
-class CarroFormInfo: ObservableObject
+class VeiculoFormInfo: ObservableObject
 {
     @Published var nome: String = ""
     @Published var marca: String = ""

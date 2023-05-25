@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct DetalheCadastroView: View
 {
     var titulo: String
@@ -16,8 +17,8 @@ struct DetalheCadastroView: View
         ZStack(alignment: .trailing)
         {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.gray)
-                .frame(height: 100)
+                .fill(.ultraThinMaterial)
+                .frame(height: 130)
             
             Text(titulo)
                 .font(.system(.largeTitle, design: .rounded))
