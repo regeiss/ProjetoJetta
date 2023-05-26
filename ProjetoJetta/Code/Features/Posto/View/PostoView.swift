@@ -18,8 +18,8 @@ struct PostoView: View
     @ObservedObject var formInfo = PostoFormInfo()
     @State var isSaveDisabled: Bool = true
     
-    let posto: Posto
-    let isEdit: Bool
+    var posto: Posto
+    var isEdit: Bool
     
     var body: some View
     {

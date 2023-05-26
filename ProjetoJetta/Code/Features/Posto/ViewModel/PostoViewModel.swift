@@ -19,18 +19,18 @@ class PostoViewModel: ObservableObject
             {
                 if isEdit
                 {
-                    let posto = posto.thaw()
-                    posto?.nome = nome
-                    posto?.logo = logo
+                    let postoEditado = posto.thaw()
+                    postoEditado?.nome = nome
+                    postoEditado?.logo = logo
+                    realm.add(postoEditado!, update: .modified)
                 }
                 else
                 {
                     let posto = Posto()
                     posto.nome = nome
                     posto.logo = logo
+                    realm.add(posto, update: .modified)
                 }
-                
-                realm.add(posto) // , update: .modified)
             }
         }
         catch let error as NSError

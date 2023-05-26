@@ -26,6 +26,10 @@ struct PostoListaScreen: View
                 }
             }
             .onDelete(perform: $postos.remove(atOffsets:))
+            if (postos.isEmpty)
+            {
+                Text("").listRowBackground(Color.clear)
+            }
         }
         .background(Color("backGroundMain"))
         .scrollContentBackground(.hidden)
