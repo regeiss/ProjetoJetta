@@ -1,5 +1,5 @@
 //
-//  ListaVeiculoScreen.swift
+//  VeiculoListaScreen.swift
 //  ProjetoJetta
 //
 //  Created by Roberto Edgar Geiss on 16/05/23.
@@ -9,7 +9,8 @@ import SwiftUI
 import RealmSwift
 import UIPilot
 
-struct ListaVeiculoScreen: View
+@available(iOS 16.0, *)
+struct VeiculoListaScreen: View
 {
     @ObservedResults(Veiculo.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var veiculos
     @EnvironmentObject var pilot: UIPilot<AppRoute>
@@ -26,6 +27,8 @@ struct ListaVeiculoScreen: View
             }
             .onDelete(perform: $veiculos.remove(atOffsets:))
         }
+        .background(Color("backGroundMain"))
+        .scrollContentBackground(.hidden)
         .navigationBarTitle("Veículos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {

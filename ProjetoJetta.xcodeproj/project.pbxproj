@@ -47,10 +47,10 @@
 		E1BDC66A2A144DF300F71A08 /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */; };
 		E1BDC66D2A14506100F71A08 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66C2A14506100F71A08 /* AppState.swift */; };
 		E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC66F2A14537A00F71A08 /* RealmUserModel.swift */; };
-		E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */; };
+		E1BDC6722A1458B500F71A08 /* VeiculoListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6712A1458B500F71A08 /* VeiculoListaScreen.swift */; };
 		E1BDC6752A16E79F00F71A08 /* FormValidator in Frameworks */ = {isa = PBXBuildFile; productRef = E1BDC6742A16E79F00F71A08 /* FormValidator */; };
 		E1DF6ABC2A1D202F0028A8FA /* TesteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF6ABB2A1D202F0028A8FA /* TesteView.swift */; };
-		E1DF6ABF2A1D23E30028A8FA /* ListaPostoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF6ABE2A1D23E30028A8FA /* ListaPostoScreen.swift */; };
+		E1DF6ABF2A1D23E30028A8FA /* PostoListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF6ABE2A1D23E30028A8FA /* PostoListaScreen.swift */; };
 		E1DF6AC22A1D2BB70028A8FA /* ListaDetalhePostoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF6AC12A1D2BB70028A8FA /* ListaDetalhePostoView.swift */; };
 		E1DF6AC42A1D41A70028A8FA /* PostoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF6AC32A1D41A70028A8FA /* PostoView.swift */; };
 		E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */; };
@@ -99,9 +99,9 @@
 		E1BDC6692A144DF300F71A08 /* RealmMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrator.swift; sourceTree = "<group>"; };
 		E1BDC66C2A14506100F71A08 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E1BDC66F2A14537A00F71A08 /* RealmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserModel.swift; sourceTree = "<group>"; };
-		E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaVeiculoScreen.swift; sourceTree = "<group>"; };
+		E1BDC6712A1458B500F71A08 /* VeiculoListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoListaScreen.swift; sourceTree = "<group>"; };
 		E1DF6ABB2A1D202F0028A8FA /* TesteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteView.swift; sourceTree = "<group>"; };
-		E1DF6ABE2A1D23E30028A8FA /* ListaPostoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPostoScreen.swift; sourceTree = "<group>"; };
+		E1DF6ABE2A1D23E30028A8FA /* PostoListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoListaScreen.swift; sourceTree = "<group>"; };
 		E1DF6AC12A1D2BB70028A8FA /* ListaDetalhePostoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDetalhePostoView.swift; sourceTree = "<group>"; };
 		E1DF6AC32A1D41A70028A8FA /* PostoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoView.swift; sourceTree = "<group>"; };
 		E1F8577D2A0E79A500D31CD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -526,7 +526,7 @@
 		E1BDC65A2A11289F00F71A08 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E1BDC6712A1458B500F71A08 /* ListaVeiculoScreen.swift */,
+				E1BDC6712A1458B500F71A08 /* VeiculoListaScreen.swift */,
 				E1F857852A0ED48E00D31CD4 /* VeiculoScreen.swift */,
 			);
 			path = Screen;
@@ -583,7 +583,7 @@
 		E1DF6ABD2A1D23CD0028A8FA /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E1DF6ABE2A1D23E30028A8FA /* ListaPostoScreen.swift */,
+				E1DF6ABE2A1D23E30028A8FA /* PostoListaScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -742,7 +742,7 @@
 				E1DF6ABC2A1D202F0028A8FA /* TesteView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,
 				E1F857832A0EAD6900D31CD4 /* HeaderView.swift in Sources */,
-				E1DF6ABF2A1D23E30028A8FA /* ListaPostoScreen.swift in Sources */,
+				E1DF6ABF2A1D23E30028A8FA /* PostoListaScreen.swift in Sources */,
 				E1BDC6412A0DB6B900F71A08 /* HeaderHamburguerView.swift in Sources */,
 				E1BDC6322A0DB28700F71A08 /* AppRoute.swift in Sources */,
 				E19300822A1C2C49009C7879 /* PostoModel.swift in Sources */,
@@ -753,7 +753,7 @@
 				E1DF6AC22A1D2BB70028A8FA /* ListaDetalhePostoView.swift in Sources */,
 				E19300902A1C4AA5009C7879 /* PerfilScreen.swift in Sources */,
 				E19300942A1C4AE0009C7879 /* PerfilViewModel.swift in Sources */,
-				E1BDC6722A1458B500F71A08 /* ListaVeiculoScreen.swift in Sources */,
+				E1BDC6722A1458B500F71A08 /* VeiculoListaScreen.swift in Sources */,
 				E193007C2A1AE6C8009C7879 /* StringExtension.swift in Sources */,
 				E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */,
 				E193006F2A1A74BA009C7879 /* ListaAbastecimentoScreen.swift in Sources */,

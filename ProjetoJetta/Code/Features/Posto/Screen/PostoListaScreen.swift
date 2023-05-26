@@ -1,5 +1,5 @@
 //
-//  ListaPostoScreen.swift
+//  PostoListaScreen.swift
 //  ProjetoJetta
 //
 //  Created by Roberto Edgar Geiss on 23/05/23.
@@ -10,7 +10,7 @@ import RealmSwift
 import UIPilot
 
 @available(iOS 16.0, *)
-struct ListaPostoScreen: View
+struct PostoListaScreen: View
 {
     @ObservedResults(Posto.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var postos
     @EnvironmentObject var pilot: UIPilot<AppRoute>
@@ -27,6 +27,8 @@ struct ListaPostoScreen: View
             }
             .onDelete(perform: $postos.remove(atOffsets:))
         }
+        .background(Color("backGroundMain"))
+        .scrollContentBackground(.hidden)
         .navigationBarTitle("Postos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {

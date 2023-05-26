@@ -67,7 +67,7 @@ struct HomeScreen: View
         {
             List
             {
-                Section(header: Text("Selecione um carro"))
+                Section(header: Text("Selecione um veículo"))
                 {
                     ForEach(veiculos) { veiculo in
                         HStack
