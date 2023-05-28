@@ -10,7 +10,7 @@ import RealmSwift
 import UIPilot
 
 @available(iOS 16.0, *)
-struct ListaAbastecimentoScreen: View
+struct AbastecimentoListaScreen: View
 {
     @ObservedResults(Abastecimento.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var abastecimentos
     @EnvironmentObject var pilot: UIPilot<AppRoute>
@@ -22,10 +22,17 @@ struct ListaAbastecimentoScreen: View
             ForEach(abastecimentos) { abastecimento in
                 HStack
                 {
-                    ListaAbastecimentoDetalheView(abastecimento: abastecimento)
+                    AbastecimentoListaDetalheView(abastecimento: abastecimento)
                 }
             }
+            .onDelete(perform: $abastecimentos.remove(atOffsets:))
+            if abastecimentos.isEmpty
+            {
+                Text("").listRowBackground(Color.clear)
+            }
         }
+        .background(Color("backGroundMain"))
+        .scrollContentBackground(.hidden)
         .navigationBarTitle("Abastecimento", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {

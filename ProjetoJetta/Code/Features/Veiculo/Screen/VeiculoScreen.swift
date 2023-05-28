@@ -36,7 +36,7 @@ struct VeiculoScreen: View
                     TextField("chassis", text: $formInfo.chassis)
                     TextField("ano", text: $formInfo.ano)
                 }
-            }
+            }.scrollContentBackground(.hidden)
         }.onAppear
         {
             if isEdit
@@ -49,6 +49,7 @@ struct VeiculoScreen: View
                 formInfo.ano = String(veiculo.ano) 
             }
         }
+        .background(Color("backGroundMain"))
         .navigationTitle("Veículo")
         .navigationBarTitleDisplayMode(.automatic)
         .navigationBarBackButtonHidden()

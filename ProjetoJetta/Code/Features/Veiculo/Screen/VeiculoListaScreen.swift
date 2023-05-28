@@ -17,31 +17,29 @@ struct VeiculoListaScreen: View
     
     var body: some View
     {
-        ZStack
+        
+        List
         {
-            List
-            {
-                ForEach(veiculos) { veiculo in
-                    HStack
-                    {
-                        ListaVeiculoDetalheView(veiculo: veiculo)
-                    }
-                }
-                .onDelete(perform: $veiculos.remove(atOffsets:))
-                if (veiculos.isEmpty)
+            ForEach(veiculos) { veiculo in
+                HStack
                 {
-                    Text("").listRowBackground(Color.clear)
+                    ListaVeiculoDetalheView(veiculo: veiculo)
                 }
             }
-            .background(Color("backGroundMain"))
-            .scrollContentBackground(.hidden)
-            .navigationBarTitle("Veículos", displayMode: .automatic)
-            .toolbar { ToolbarItem(placement: .navigationBarTrailing)
-                { Button {
-                    pilot.push(.edicaoVeiculo(veiculo: Veiculo()))
-                }
-                    label: { Image(systemName: "plus")}}
+            .onDelete(perform: $veiculos.remove(atOffsets:))
+            if veiculos.isEmpty
+            {
+                Text("").listRowBackground(Color.clear)
             }
-        }.background(Color("backGroundMain"))
+        }
+        .background(Color("backGroundMain"))
+        .scrollContentBackground(.hidden)
+        .navigationBarTitle("Veículos", displayMode: .automatic)
+        .toolbar { ToolbarItem(placement: .navigationBarTrailing)
+            { Button {
+                pilot.push(.edicaoVeiculo(veiculo: Veiculo()))
+            }
+                label: { Image(systemName: "plus")}}
+        }
     }
 }

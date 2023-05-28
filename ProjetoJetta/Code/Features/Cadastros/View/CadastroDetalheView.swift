@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 16.0, *)
-struct DetalheCadastroView: View
+struct CadastroDetalheView: View
 {
     var titulo: String
     

@@ -20,16 +20,16 @@ struct CadastrosScreen: View
             Color("backGroundMain").edgesIgnoringSafeArea(.all)
             VStack
             {
-                DetalheCadastroView(titulo: "Categorias")
+                CadastroDetalheView(titulo: "Categorias")
                     .onTapGesture {
                     pilot.push(.root)}
-                DetalheCadastroView(titulo: "Serviços")
+                CadastroDetalheView(titulo: "Serviços")
                     .onTapGesture {
                     pilot.push(.root)}
-                DetalheCadastroView(titulo: "Veículos")
+                CadastroDetalheView(titulo: "Veículos")
                     .onTapGesture {
                     pilot.push(.veiculo)}
-                DetalheCadastroView(titulo: "Postos")
+                CadastroDetalheView(titulo: "Postos")
                     .onTapGesture {
                     pilot.push(.listaPosto)}
                 Spacer()

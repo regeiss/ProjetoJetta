@@ -59,12 +59,12 @@ struct ProjetoJettaApp: SwiftUI.App
                     case .settings: SettingsView()
                     case .veiculo: VeiculoListaScreen()
                     case .edicaoVeiculo(let veiculo): VeiculoScreen(veiculo: veiculo)
-                    case .abastecimento: ListaAbastecimentoScreen()
-                    case .edicaoAbastecimento(let abastecimento): ListaAbastecimentoScreen()
+                    case .abastecimento: AbastecimentoListaScreen()
+                    case .edicaoAbastecimento(let abastecimento): AbastecimentoScreen(abastecimento: abastecimento, isEdit: true)
                     case .cadastros: CadastrosScreen()
                     case .listaPosto: PostoListaScreen()
-                    case .adicaoPosto: PostoView(posto: Posto(), isEdit: false)
-                    case .edicaoPosto(let posto): PostoView(posto: posto, isEdit: true)
+                    case .adicaoPosto: PostoScreen(posto: Posto(), isEdit: false)
+                    case .edicaoPosto(let posto): PostoScreen(posto: posto, isEdit: true)
                     case .testeView: TesteView()
                     }
                 }}

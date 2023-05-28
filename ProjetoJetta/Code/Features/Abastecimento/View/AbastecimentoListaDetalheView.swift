@@ -10,7 +10,7 @@ import RealmSwift
 import UIPilot
 
 @available(iOS 16.0, *)
-struct ListaAbastecimentoDetalheView: View
+struct AbastecimentoListaDetalheView: View
 {
     @ObservedRealmObject var abastecimento: Abastecimento
     @EnvironmentObject var pilot: UIPilot<AppRoute>
