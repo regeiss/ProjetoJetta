@@ -18,7 +18,7 @@ struct ListaVeiculoDetalheView: View
     {
         HStack
         {
-            Text(veiculo.name)
+            Text(veiculo.nome)
             Text(veiculo.placa ?? "")
             Text(veiculo.modelo ?? "")
         }.onTapGesture {

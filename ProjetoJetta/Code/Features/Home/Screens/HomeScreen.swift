@@ -72,8 +72,8 @@ struct HomeScreen: View
                     ForEach(veiculos) { veiculo in
                         HStack
                         {
-                            Text(veiculo.name)
-                            Text(veiculo.placa ?? "")
+                            Text(veiculo.nome)
+                            Text(veiculo.placa)
                             Text(String(veiculo.ano))
                         }
                     }

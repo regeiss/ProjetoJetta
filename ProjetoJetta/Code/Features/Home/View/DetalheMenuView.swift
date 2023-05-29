@@ -20,7 +20,7 @@ struct DetalheMenuView: View
         ZStack(alignment: .bottomTrailing)
         {
             RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThinMaterial)
+                .fill(LinearGradient(gradient: Gradient(colors: [.mint, .blue]), startPoint: .top, endPoint: .bottom))
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
                 .onTapGesture {
                     if collection.name == "Abastecimento"

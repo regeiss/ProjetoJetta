@@ -29,7 +29,7 @@ class PostoViewModel: ObservableObject
                     let posto = Posto()
                     posto.nome = nome
                     posto.logo = logo
-                    realm.add(posto, update: .modified)
+                    realm.add(posto)
                 }
             }
         }

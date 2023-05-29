@@ -37,7 +37,7 @@ struct VeiculoListaScreen: View
         .navigationBarTitle("Veículos", displayMode: .automatic)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                pilot.push(.edicaoVeiculo(veiculo: Veiculo()))
+                pilot.push(.adicaoVeiculo(veiculo: Veiculo()))
             }
                 label: { Image(systemName: "plus")}}
         }

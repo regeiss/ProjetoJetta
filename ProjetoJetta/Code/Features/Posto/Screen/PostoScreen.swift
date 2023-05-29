@@ -46,9 +46,11 @@ struct PostoScreen: View
             {
                 Section
                 {
-                    TextField("nome", text: $form.nome).validation(form.nomeVazio)
+                    TextField("nome", text: $form.nome)
+                        .validation(form.nomeVazio)
                         .focused($postoInFocus, equals: .nome)
                         .onAppear{ DispatchQueue.main.asyncAfter(deadline: .now() + 0.50) {self.postoInFocus = .nome}}
+                    
                     TextField("logo", text: $form.logo)
                 }
             }
@@ -70,15 +72,27 @@ struct PostoScreen: View
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading)
             { Button {
+                save()
                 pilot.pop(animated: .random())
             }
                 label: { Text("Cancelar")}}
             ToolbarItem(placement: .navigationBarTrailing)
             { Button {
-                viewModel.saveObject(posto: posto, isEdit: isEdit, nome: form.nome, logo: form.logo)
+                save()
                 pilot.pop(animated: .random())
             }
-                label: { Text("OK")}.disabled(isSaveDisabled)}
+            label: { Text("OK").disabled(isSaveDisabled)}
+            }
         }
+    }
+    
+    func save()
+    {
+        let posto = Posto()
+        
+        posto.nome = form.nome
+        posto.logo = form.logo
+
+        viewModel.saveObject(posto: posto, isEdit: isEdit, nome: posto.nome, logo: posto.logo)
     }
 }

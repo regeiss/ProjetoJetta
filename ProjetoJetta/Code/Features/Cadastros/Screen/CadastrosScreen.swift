@@ -28,7 +28,7 @@ struct CadastrosScreen: View
                     pilot.push(.root)}
                 CadastroDetalheView(titulo: "Veículos")
                     .onTapGesture {
-                    pilot.push(.veiculo)}
+                    pilot.push(.listaVeiculo)}
                 CadastroDetalheView(titulo: "Postos")
                     .onTapGesture {
                     pilot.push(.listaPosto)}

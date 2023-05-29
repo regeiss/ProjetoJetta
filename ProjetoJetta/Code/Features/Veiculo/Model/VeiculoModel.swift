@@ -11,12 +11,12 @@ import RealmSwift
 class Veiculo: Object, ObjectKeyIdentifiable
 {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var name = ""
-    @Persisted var marca: String?
-    @Persisted var modelo: String?
+    @Persisted var nome = ""
+    @Persisted var marca: String = ""
+    @Persisted var modelo: String = ""
     @Persisted var ano: Int
-    @Persisted var placa: String?
-    @Persisted var chassis: String?
+    @Persisted var placa: String = ""
+    @Persisted var chassis: String = ""
     @Persisted var ativo: Bool = false
     @Persisted var padrao: Bool = false
     @Persisted var abastecimentoVeiculo: List<Abastecimento>
@@ -25,7 +25,7 @@ class Veiculo: Object, ObjectKeyIdentifiable
     convenience init(name: String, marca: String, modelo: String, ano: Int, placa: String, chassis: String, ativo: Bool, padrao: Bool )
     {
         self.init()
-        self.name = name
+        self.nome = nome
         self.marca = marca
         self.modelo = modelo
         self.ano = ano

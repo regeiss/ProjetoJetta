@@ -20,8 +20,9 @@ enum AppRoute: Equatable
     //
     case cadastros
     //
-    case veiculo
+    case listaVeiculo
     case edicaoVeiculo(veiculo: Veiculo)
+    case adicaoVeiculo(veiculo: Veiculo)
     
     //
     case listaPosto
