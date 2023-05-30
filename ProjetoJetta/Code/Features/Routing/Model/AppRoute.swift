@@ -30,4 +30,10 @@ enum AppRoute: Equatable
     case edicaoPosto(posto: Posto)
     // 
     case testeView
+    //
+    case listaServico
+    //
+    case listaRelatorio
+    //
+    case listaAlerta
 }

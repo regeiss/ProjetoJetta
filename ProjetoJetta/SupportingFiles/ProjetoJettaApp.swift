@@ -67,6 +67,10 @@ struct ProjetoJettaApp: SwiftUI.App
                     case .adicaoPosto: PostoScreen(posto: Posto(), isEdit: false)
                     case .edicaoPosto(let posto): PostoScreen(posto: posto, isEdit: true)
                     case .testeView: TesteView()
+                    case .listaServico: ServicoListaScreen()
+                    case .listaRelatorio: RelatorioListaScreen()
+                    case .listaAlerta: AlertaListaScreen()
+                        
                     }
                 }}
         }

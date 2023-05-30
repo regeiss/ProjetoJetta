@@ -24,6 +24,9 @@
 		E19300972A1D9160009C7879 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300962A1D9160009C7879 /* DatabaseManager.swift */; };
 		E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300992A1EEE35009C7879 /* PostoViewModel.swift */; };
 		E193009C2A225980009C7879 /* AbastecimentoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193009B2A225980009C7879 /* AbastecimentoScreen.swift */; };
+		E1B58D182A2575D800322852 /* ServicoListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D172A2575D800322852 /* ServicoListaScreen.swift */; };
+		E1B58D1C2A257CEB00322852 /* RelatorioListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */; };
+		E1B58D202A257E9D00322852 /* AlertaListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */; };
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
@@ -77,6 +80,9 @@
 		E19300962A1D9160009C7879 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		E19300992A1EEE35009C7879 /* PostoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoViewModel.swift; sourceTree = "<group>"; };
 		E193009B2A225980009C7879 /* AbastecimentoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoScreen.swift; sourceTree = "<group>"; };
+		E1B58D172A2575D800322852 /* ServicoListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoListaScreen.swift; sourceTree = "<group>"; };
+		E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioListaScreen.swift; sourceTree = "<group>"; };
+		E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaListaScreen.swift; sourceTree = "<group>"; };
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -299,6 +305,54 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E1B58D152A2575B100322852 /* Servico */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D162A2575BB00322852 /* Screen */,
+			);
+			path = Servico;
+			sourceTree = "<group>";
+		};
+		E1B58D162A2575BB00322852 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D172A2575D800322852 /* ServicoListaScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E1B58D192A257C7D00322852 /* Alerta */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D1E2A257E8700322852 /* Screen */,
+			);
+			path = Alerta;
+			sourceTree = "<group>";
+		};
+		E1B58D1A2A257C8E00322852 /* Relatorio */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D1D2A257E7500322852 /* Screen */,
+			);
+			path = Relatorio;
+			sourceTree = "<group>";
+		};
+		E1B58D1D2A257E7500322852 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E1B58D1E2A257E8700322852 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		E1BDC6052A0DA79F00F71A08 = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +501,9 @@
 		E1BDC6432A0DB93500F71A08 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B58D1A2A257C8E00322852 /* Relatorio */,
+				E1B58D192A257C7D00322852 /* Alerta */,
+				E1B58D152A2575B100322852 /* Servico */,
 				E193006C2A1A748B009C7879 /* Abastecimento */,
 				E19300852A1C3A7A009C7879 /* Cadastros */,
 				E19300792A1AE531009C7879 /* Common */,
@@ -722,11 +779,13 @@
 			files = (
 				E1BDC65F2A1193E700F71A08 /* VeiculoViewModel.swift in Sources */,
 				E1BDC6392A0DB3CC00F71A08 /* HomeScreen.swift in Sources */,
+				E1B58D1C2A257CEB00322852 /* RelatorioListaScreen.swift in Sources */,
 				E1BDC66D2A14506100F71A08 /* AppState.swift in Sources */,
 				E1BDC66A2A144DF300F71A08 /* RealmMigrator.swift in Sources */,
 				E193009C2A225980009C7879 /* AbastecimentoScreen.swift in Sources */,
 				E1BDC65C2A1129C400F71A08 /* VeiculoModel.swift in Sources */,
 				E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */,
+				E1B58D182A2575D800322852 /* ServicoListaScreen.swift in Sources */,
 				E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */,
 				E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */,
 				E19300922A1C4AC7009C7879 /* ListaPerfilDetalheView.swift in Sources */,
@@ -742,6 +801,7 @@
 				E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */,
 				E19300882A1C3BC4009C7879 /* CadastrosScreen.swift in Sources */,
 				E193008B2A1C3C96009C7879 /* CadastroDetalheView.swift in Sources */,
+				E1B58D202A257E9D00322852 /* AlertaListaScreen.swift in Sources */,
 				E1F8577E2A0E79A500D31CD4 /* SettingsView.swift in Sources */,
 				E1DF6ABC2A1D202F0028A8FA /* TesteView.swift in Sources */,
 				E1BDC63C2A0DB46A00F71A08 /* Collections.swift in Sources */,

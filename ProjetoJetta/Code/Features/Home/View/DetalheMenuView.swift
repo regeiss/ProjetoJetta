@@ -32,6 +32,21 @@ struct DetalheMenuView: View
                     {
                         pilot.push(.cadastros)
                     }
+                    
+                    if collection.name == "Serviço"
+                    {
+                        pilot.push(.listaServico)
+                    }
+                    
+                    if collection.name == "Relatórios"
+                    {
+                        pilot.push(.listaRelatorio)
+                    }
+                    
+                    if collection.name == "Alertas"
+                    {
+                        pilot.push(.listaAlerta)
+                    }
                 }
             
             Text(collection.name)
