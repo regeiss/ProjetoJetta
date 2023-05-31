@@ -27,7 +27,7 @@ struct SideMenuView: View
                     .foregroundColor(.gray)
                     .font(.headline)
             }
-            .padding(.top, 100)
+            .padding(.top, 30)
             .onTapGesture
             {
                 showMenu = false
@@ -85,9 +85,10 @@ struct SideMenuView: View
                 Text(appBuild ?? "1.0")
                     .foregroundColor(.gray)
             }.padding([.leading, .bottom])
-        }.edgesIgnoringSafeArea(.all)
+        }
          .padding()
          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
          .background(Color(red: 32/255, green: 32/255, blue: 32/255))
+         .edgesIgnoringSafeArea(.all)
     }
 }

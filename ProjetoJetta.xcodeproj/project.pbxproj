@@ -27,6 +27,7 @@
 		E1B58D182A2575D800322852 /* ServicoListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D172A2575D800322852 /* ServicoListaScreen.swift */; };
 		E1B58D1C2A257CEB00322852 /* RelatorioListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */; };
 		E1B58D202A257E9D00322852 /* AlertaListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */; };
+		E1B58D222A26BFB700322852 /* MenuInicialImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B58D212A26BFB700322852 /* MenuInicialImages.xcassets */; };
 		E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */; };
 		E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */; };
 		E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BDC6182A0DA7A000F71A08 /* Preview Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		E1B58D172A2575D800322852 /* ServicoListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoListaScreen.swift; sourceTree = "<group>"; };
 		E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioListaScreen.swift; sourceTree = "<group>"; };
 		E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaListaScreen.swift; sourceTree = "<group>"; };
+		E1B58D212A26BFB700322852 /* MenuInicialImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MenuInicialImages.xcassets; sourceTree = "<group>"; };
 		E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoJetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC6112A0DA79F00F71A08 /* ProjetoJettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoJettaApp.swift; sourceTree = "<group>"; };
 		E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 			children = (
 				E1BDC6152A0DA7A000F71A08 /* AppIcon.xcassets */,
 				E19300692A1838F9009C7879 /* BackGroundColors.xcassets */,
+				E1B58D212A26BFB700322852 /* MenuInicialImages.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 			files = (
 				E1BDC6242A0DAACD00F71A08 /* .swiftlint.yml in Resources */,
 				E1BDC6282A0DAEE400F71A08 /* Localizable.strings in Resources */,
+				E1B58D222A26BFB700322852 /* MenuInicialImages.xcassets in Resources */,
 				E193006A2A1838F9009C7879 /* BackGroundColors.xcassets in Resources */,
 				E1BDC6192A0DA7A000F71A08 /* Preview Assets.xcassets in Resources */,
 				E1BDC6162A0DA7A000F71A08 /* AppIcon.xcassets in Resources */,

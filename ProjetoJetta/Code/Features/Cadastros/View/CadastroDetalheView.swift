@@ -14,7 +14,7 @@ struct CadastroDetalheView: View
     
     var body: some View
     {
-        ZStack(alignment: .trailing)
+        ZStack(alignment: .bottomTrailing)
         {
             RoundedRectangle(cornerRadius: 10)
                 .fill(.ultraThinMaterial)
@@ -22,9 +22,11 @@ struct CadastroDetalheView: View
             
             Text(titulo)
                 .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
+                .fontWeight(.heavy)
                 .foregroundColor(.white)
+                .offset(x: 1.0, y: 10)
                 .padding()
+                .allowsHitTesting(false)
         }
     }
 }

@@ -19,8 +19,8 @@ struct ListaVeiculoDetalheView: View
         HStack
         {
             Text(veiculo.nome)
-            Text(veiculo.placa ?? "")
-            Text(veiculo.modelo ?? "")
+            Text(veiculo.placa)
+            Text(veiculo.modelo)
         }.onTapGesture {
             pilot.push(.edicaoVeiculo(veiculo: veiculo))
         }

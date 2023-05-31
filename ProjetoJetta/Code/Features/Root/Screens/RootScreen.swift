@@ -41,7 +41,7 @@ struct RootScreen: View
                         .frame(width: geometry.size.width / 2)
                 }
             }
-            // .toolbar(self.showMenu ? .hidden : .visible)
+            .toolbar(self.showMenu ? .hidden : .visible)
             .gesture(drag)
             .modifier(DarkModeViewModifier())
         }

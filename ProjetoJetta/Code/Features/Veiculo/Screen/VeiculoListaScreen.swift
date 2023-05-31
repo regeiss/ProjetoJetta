@@ -17,7 +17,6 @@ struct VeiculoListaScreen: View
     
     var body: some View
     {
-        
         List
         {
             ForEach(veiculos) { veiculo in
