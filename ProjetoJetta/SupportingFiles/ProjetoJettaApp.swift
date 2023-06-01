@@ -9,29 +9,32 @@ import SwiftUI
 import UIPilot
 import RealmSwift
 
-let app = App(id: "xxxxx")
+let realmApp = RealmSwift.App(id: "write-here-your-own-realm-app-id")
 
 class AppDelegate: NSObject, UIApplicationDelegate
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool
     {
-            print("Migration Code Goes here")
-            configure()
+            configureRealm()
             return true
         }
     
-    func configure()
+    func configureRealm()
     {
-        var config = Realm.Configuration(
-            schemaVersion: 1,
-            deleteRealmIfMigrationNeeded: true
-        )
-        
-        config.shouldCompactOnLaunch = { totalBytes, usedBytes in
-            let oneHundredMB = 100 * 1024 * 1024
-            return (totalBytes > oneHundredMB) && (Double(usedBytes) / Double(totalBytes)) < 0.5
-        }
-        Realm.Configuration.defaultConfiguration = config
+        let config = Realm.Configuration(
+                 // Set the new schema version. This must be greater than the previously used
+                 // version (if you've never set a schema version before, the version is 0).
+                 schemaVersion: 1,
+                 migrationBlock: { migration, oldSchemaVersion in
+                     // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                     if oldSchemaVersion < 1 {
+                         // Nothing to do!
+                         // Realm will automatically detect new properties and removed properties
+                         // And will update the schema on disk automatically
+                     }
+                 })
+             
+             Realm.Configuration.defaultConfiguration = config
     }
 }
 
@@ -80,7 +83,7 @@ struct ProjetoJettaApp: SwiftUI.App
             {
             case .active:
                 print("active")
-                print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+                print("DEBUG: Realm Path: \(Realm.Configuration.defaultConfiguration.fileURL)")
             case .inactive:
                 print("inactive")
             case .background:

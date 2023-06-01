@@ -37,7 +37,6 @@ struct HomeScreen: View
         
         ZStack
         {
-            Image("gasStation")
             ScrollView(.vertical)
             {
                 Spacer()
