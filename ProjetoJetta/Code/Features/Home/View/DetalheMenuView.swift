@@ -19,35 +19,29 @@ struct DetalheMenuView: View
     {
         ZStack(alignment: .bottomTrailing)
         {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Material.regularMaterial)
+            Image(collection.image)
+            .resizable()
+            .allowsHitTesting(false)
+            .aspectRatio(contentMode: .fill)
                 .frame(height: collection.name == "Abastecimento" ? 150 : height)
-                .onTapGesture {
-                    if collection.name == "Abastecimento"
-                    {
-                        pilot.push(.abastecimento)
-                    }
-                    
-                    if collection.name == "Cadastros"
-                    {
-                        pilot.push(.cadastros)
-                    }
-                    
-                    if collection.name == "Serviço"
-                    {
-                        pilot.push(.listaServico)
-                    }
-                    
-                    if collection.name == "Relatórios"
-                    {
-                        pilot.push(.listaRelatorio)
-                    }
-                    
-                    if collection.name == "Alertas"
-                    {
-                        pilot.push(.listaAlerta)
-                    }
-                }
+                .cornerRadius(20)
+                .clipped()
+                .overlay(
+                    Rectangle()
+                        .foregroundColor(.black)
+                        .cornerRadius(20)
+                        .opacity(0.2)
+                        .frame(height: collection.name == "Abastecimento" ? 150 : height)
+                    )
+//            RoundedRectangle(cornerRadius: 10)
+//                .fill(Material.ultraThinMaterial).opacity(0.4)
+//                .frame(height: collection.name == "Abastecimento" ? 150 : height)
+
+            
+            if collection.name == "Abastecimento"
+            {
+                UltimoAbastecimentoView().offset(x: -10, y: -50)
+            }
             
             Text(collection.name)
                 .font(.system(.largeTitle, design: .rounded))
@@ -56,6 +50,6 @@ struct DetalheMenuView: View
                 .offset(x: 1.0, y: 10)
                 .padding()
                 .allowsHitTesting(false)
-        }// .frame(minWidth: 230, maxWidth: .infinity, minHeight: height, maxHeight: 150)
+        }
     }
 }

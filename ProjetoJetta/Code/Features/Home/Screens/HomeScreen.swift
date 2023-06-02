@@ -6,21 +6,23 @@
 //
 
 import SwiftUI
+import UIPilot
 import RealmSwift
 
 @available(iOS 16.0, *)
 struct HomeScreen: View
 {
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
     @Binding var showMenu: Bool
     @State private var isShowingSheet = false
     @ObservedResults(Veiculo.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var veiculos
     
     let collections = [
-        Collections(id: 0, name: "Abastecimento", image: "gasStation", content: "."),
-        Collections(id: 1, name: "Serviço", image: "service", content: "."),
-        Collections(id: 2, name: "Relatórios", image: "report", content: "."),
+        Collections(id: 0, name: "Abastecimento", image: "abastecimento", content: "."),
+        Collections(id: 1, name: "Serviço", image: "servicos", content: "."),
+        Collections(id: 2, name: "Relatórios", image: "relatorios", content: "."),
         Collections(id: 3, name: "Alertas", image: "alertas", content: "."),
-        Collections(id: 4, name: "Cadastros", image: "config", content: ".")
+        Collections(id: 4, name: "Cadastros", image: "cadastros", content: ".")
     ]
     
     let columns = [ GridItem(.flexible(minimum: 230, maximum: .infinity))]
@@ -43,11 +45,17 @@ struct HomeScreen: View
                 LazyVGrid(columns: columns, alignment: .center, spacing: 5)
                 {
                     DetalheMenuView(collection: collections[0])
+                        .onTapGesture { pilot.push(.abastecimento)}
                     DetalheMenuView(collection: collections[1])
+                        .onTapGesture { pilot.push(.listaServico)}
                     DetalheMenuView(collection: collections[2])
+                        .onTapGesture { pilot.push(.listaRelatorio)}
                     DetalheMenuView(collection: collections[3])
+                        .onTapGesture { pilot.push(.listaAlerta)}
                     DetalheMenuView(collection: collections[4])
-                }.padding([.leading, .trailing])
+                        .onTapGesture { pilot.push(.cadastros)}
+                }
+                .padding([.leading, .trailing])
                 .gesture(drag)
             }
             .navigationTitle("Home")
@@ -79,7 +87,8 @@ struct HomeScreen: View
                     }
 
                 }
-            }.presentationDetents([.medium, .large])
+            }
+            .presentationDetents([.medium, .large])
             
             Button("Dispensar", action: { isShowingSheet.toggle() })
                 .buttonStyle(.borderedProminent)

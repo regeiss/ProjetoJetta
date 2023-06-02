@@ -10,16 +10,28 @@ import SwiftUI
 @available(iOS 16.0, *)
 struct CadastroDetalheView: View
 {
+    let height: CGFloat = 150
     var titulo: String
     
     var body: some View
     {
         ZStack(alignment: .bottomTrailing)
         {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThinMaterial)
-                .frame(height: 130)
-            
+            Image("gasStation")
+            .resizable()
+            .allowsHitTesting(false)
+            .aspectRatio(contentMode: .fill)
+                .frame(height: height)
+                .cornerRadius(20)
+                .clipped()
+                .overlay(
+                    Rectangle()
+                        .foregroundColor(.black)
+                        .cornerRadius(20)
+                        .opacity(0.2)
+                        .frame(height: height)
+                    )
+        
             Text(titulo)
                 .font(.system(.largeTitle, design: .rounded))
                 .fontWeight(.heavy)
