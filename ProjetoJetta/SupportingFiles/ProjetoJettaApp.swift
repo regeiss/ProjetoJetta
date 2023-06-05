@@ -57,7 +57,7 @@ struct ProjetoJettaApp: SwiftUI.App
                     switch route
                     {
                     case .root: RootScreen(showMenu: false)
-                    case .login: EmptyView()
+                    case .login: LoginScreen()
                     case .browser: EmptyView()
                     case .settings: SettingsView()
                     case .listaVeiculo: VeiculoListaScreen()

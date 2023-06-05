@@ -31,7 +31,7 @@ struct SideMenuView: View
             .onTapGesture
             {
                 showMenu = false
-                // router.toLogin()
+                pilot.push(.login)
             }
             HStack
             {
