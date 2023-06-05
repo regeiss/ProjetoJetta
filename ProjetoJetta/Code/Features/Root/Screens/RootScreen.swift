@@ -38,10 +38,9 @@ struct RootScreen: View
                 if self.showMenu
                 {
                     SideMenuView(showMenu: $showMenu)
-                        .frame(width: geometry.size.width / 2)
-                }
+                        .frame(width: geometry.size.width / 2).edgesIgnoringSafeArea(.top)
+                    .zIndex(0)                }
             }
-            .toolbar(self.showMenu ? .hidden : .visible)
             .gesture(drag)
             .modifier(DarkModeViewModifier())
         }

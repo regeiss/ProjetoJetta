@@ -86,9 +86,10 @@ struct SideMenuView: View
                     .foregroundColor(.gray)
             }.padding([.leading, .bottom])
         }
-         .padding()
+         .edgesIgnoringSafeArea(.all)
+         .padding(.leading)
          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
          .background(Color(red: 32/255, green: 32/255, blue: 32/255))
-         .edgesIgnoringSafeArea(.all)
+         
     }
 }

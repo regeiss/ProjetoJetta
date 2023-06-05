@@ -17,7 +17,7 @@ struct CadastroDetalheView: View
     {
         ZStack(alignment: .bottomTrailing)
         {
-            Image("gasStation")
+            Image("abastecimento")
             .resizable()
             .allowsHitTesting(false)
             .aspectRatio(contentMode: .fill)

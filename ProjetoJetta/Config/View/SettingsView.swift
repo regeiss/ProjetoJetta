@@ -58,7 +58,10 @@ struct SettingsView: View
                     .cornerRadius(10)
                 }
             }
+            .background(Color("backGroundMain"))
+            .scrollContentBackground(.hidden)
+            .navigationBarTitle("Ajustes", displayMode: .automatic)
             Spacer()
-        }
+        }.background(Color("backGroundMain"))
     }
 }

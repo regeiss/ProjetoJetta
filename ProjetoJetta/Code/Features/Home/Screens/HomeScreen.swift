@@ -63,7 +63,7 @@ struct HomeScreen: View
             .toolbarRole(.navigationStack)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading)
-                { Button { showMenu = true}
+                { Button { showMenu.toggle()}
                     label: { Image(systemName: "line.3.horizontal")}}
                 
                 ToolbarItem(placement: .navigationBarTrailing)

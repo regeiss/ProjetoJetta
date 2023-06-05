@@ -25,6 +25,13 @@
 		E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300992A1EEE35009C7879 /* PostoViewModel.swift */; };
 		E193009C2A225980009C7879 /* AbastecimentoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193009B2A225980009C7879 /* AbastecimentoScreen.swift */; };
 		E1AF16DE2A296E9A008E5408 /* UltimoAbastecimentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16DD2A296E9A008E5408 /* UltimoAbastecimentoView.swift */; };
+		E1AF16E12A2D4E33008E5408 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E1AF16E02A2D4E33008E5408 /* Alamofire */; };
+		E1AF16E42A2D4F4B008E5408 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16E32A2D4F4B008E5408 /* APIRequest.swift */; };
+		E1AF16E62A2D5A66008E5408 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16E52A2D5A66008E5408 /* APIError.swift */; };
+		E1AF16E82A2D5AE5008E5408 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16E72A2D5AE5008E5408 /* Auth.swift */; };
+		E1AF16EB2A2D5C16008E5408 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = E1AF16EA2A2D5C16008E5408 /* SwiftKeychainWrapper */; };
+		E1AF16EF2A2D6166008E5408 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16EE2A2D6166008E5408 /* Credentials.swift */; };
+		E1AF16F12A2D6177008E5408 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16F02A2D6177008E5408 /* KeychainKey.swift */; };
 		E1B58D182A2575D800322852 /* ServicoListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D172A2575D800322852 /* ServicoListaScreen.swift */; };
 		E1B58D1C2A257CEB00322852 /* RelatorioListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */; };
 		E1B58D202A257E9D00322852 /* AlertaListaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */; };
@@ -83,6 +90,11 @@
 		E19300992A1EEE35009C7879 /* PostoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoViewModel.swift; sourceTree = "<group>"; };
 		E193009B2A225980009C7879 /* AbastecimentoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoScreen.swift; sourceTree = "<group>"; };
 		E1AF16DD2A296E9A008E5408 /* UltimoAbastecimentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimoAbastecimentoView.swift; sourceTree = "<group>"; };
+		E1AF16E32A2D4F4B008E5408 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		E1AF16E52A2D5A66008E5408 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E1AF16E72A2D5AE5008E5408 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		E1AF16EE2A2D6166008E5408 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		E1AF16F02A2D6177008E5408 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
 		E1B58D172A2575D800322852 /* ServicoListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoListaScreen.swift; sourceTree = "<group>"; };
 		E1B58D1B2A257CEB00322852 /* RelatorioListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioListaScreen.swift; sourceTree = "<group>"; };
 		E1B58D1F2A257E9D00322852 /* AlertaListaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaListaScreen.swift; sourceTree = "<group>"; };
@@ -126,7 +138,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AF16E12A2D4E33008E5408 /* Alamofire in Frameworks */,
 				E1BDC6582A1125B200F71A08 /* RealmSwift in Frameworks */,
+				E1AF16EB2A2D5C16008E5408 /* SwiftKeychainWrapper in Frameworks */,
 				E1BDC6562A1125B200F71A08 /* Realm in Frameworks */,
 				E1BDC62E2A0DB1A300F71A08 /* UIPilot in Frameworks */,
 				E1BDC6752A16E79F00F71A08 /* FormValidator in Frameworks */,
@@ -192,6 +206,7 @@
 		E19300792A1AE531009C7879 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E1AF16ED2A2D6113008E5408 /* Model */,
 				E1DF6ABB2A1D202F0028A8FA /* TesteView.swift */,
 			);
 			path = Common;
@@ -308,6 +323,32 @@
 				E19300992A1EEE35009C7879 /* PostoViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1AF16E22A2D4F36008E5408 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1AF16E32A2D4F4B008E5408 /* APIRequest.swift */,
+				E1AF16E52A2D5A66008E5408 /* APIError.swift */,
+				E1AF16E72A2D5AE5008E5408 /* Auth.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E1AF16EC2A2D5F32008E5408 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E1AF16ED2A2D6113008E5408 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1AF16EE2A2D6166008E5408 /* Credentials.swift */,
+				E1AF16F02A2D6177008E5408 /* KeychainKey.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E1B58D152A2575B100322852 /* Servico */ = {
@@ -507,6 +548,7 @@
 		E1BDC6432A0DB93500F71A08 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1AF16EC2A2D5F32008E5408 /* Login */,
 				E1B58D1A2A257C8E00322852 /* Relatorio */,
 				E1B58D192A257C7D00322852 /* Alerta */,
 				E1B58D152A2575B100322852 /* Servico */,
@@ -527,6 +569,7 @@
 		E1BDC6442A0DB96700F71A08 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E1AF16E22A2D4F36008E5408 /* Network */,
 				E193007A2A1AE6A6009C7879 /* Extensions */,
 			);
 			path = Utilities;
@@ -697,6 +740,8 @@
 				E1BDC6552A1125B200F71A08 /* Realm */,
 				E1BDC6572A1125B200F71A08 /* RealmSwift */,
 				E1BDC6742A16E79F00F71A08 /* FormValidator */,
+				E1AF16E02A2D4E33008E5408 /* Alamofire */,
+				E1AF16EA2A2D5C16008E5408 /* SwiftKeychainWrapper */,
 			);
 			productName = ProjetoJetta;
 			productReference = E1BDC60E2A0DA79F00F71A08 /* ProjetoJetta.app */;
@@ -731,6 +776,8 @@
 				E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */,
 				E1BDC6542A1125B200F71A08 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				E1BDC6732A16E79F00F71A08 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */,
+				E1AF16DF2A2D4E33008E5408 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E1AF16E92A2D5C16008E5408 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = E1BDC60F2A0DA79F00F71A08 /* Products */;
 			projectDirPath = "";
@@ -794,6 +841,7 @@
 				E1AF16DE2A296E9A008E5408 /* UltimoAbastecimentoView.swift in Sources */,
 				E1BDC6642A11A01500F71A08 /* VeiculoAction.swift in Sources */,
 				E1B58D182A2575D800322852 /* ServicoListaScreen.swift in Sources */,
+				E1AF16E42A2D4F4B008E5408 /* APIRequest.swift in Sources */,
 				E1BDC6682A12FDD200F71A08 /* RealmConfig.swift in Sources */,
 				E1BDC6702A14537A00F71A08 /* RealmUserModel.swift in Sources */,
 				E19300922A1C4AC7009C7879 /* ListaPerfilDetalheView.swift in Sources */,
@@ -806,6 +854,8 @@
 				E19300752A1ADD9C009C7879 /* AbastecimentoViewModel.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
 				E1BDC6622A119F6F00F71A08 /* ListaVeiculoDetalheView.swift in Sources */,
+				E1AF16F12A2D6177008E5408 /* KeychainKey.swift in Sources */,
+				E1AF16E82A2D5AE5008E5408 /* Auth.swift in Sources */,
 				E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */,
 				E19300882A1C3BC4009C7879 /* CadastrosScreen.swift in Sources */,
 				E193008B2A1C3C96009C7879 /* CadastroDetalheView.swift in Sources */,
@@ -820,8 +870,10 @@
 				E19300822A1C2C49009C7879 /* PostoModel.swift in Sources */,
 				E1BDC6362A0DB32E00F71A08 /* RootScreen.swift in Sources */,
 				E154DD222A1FB9CD002C23A0 /* RootDetalheView.swift in Sources */,
+				E1AF16EF2A2D6166008E5408 /* Credentials.swift in Sources */,
 				E1BDC63E2A0DB5F300F71A08 /* DetalheMenuView.swift in Sources */,
 				E1F857862A0ED48E00D31CD4 /* VeiculoScreen.swift in Sources */,
+				E1AF16E62A2D5A66008E5408 /* APIError.swift in Sources */,
 				E1DF6AC22A1D2BB70028A8FA /* ListaDetalhePostoView.swift in Sources */,
 				E19300902A1C4AA5009C7879 /* PerfilScreen.swift in Sources */,
 				E19300942A1C4AE0009C7879 /* PerfilViewModel.swift in Sources */,
@@ -1047,6 +1099,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E1AF16DF2A2D4E33008E5408 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E1AF16E92A2D5C16008E5408 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/canopas/UIPilot.git";
@@ -1074,6 +1142,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E1AF16E02A2D4E33008E5408 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1AF16DF2A2D4E33008E5408 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E1AF16EA2A2D5C16008E5408 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1AF16E92A2D5C16008E5408 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
 		E1BDC62D2A0DB1A300F71A08 /* UIPilot */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1BDC62C2A0DB1A300F71A08 /* XCRemoteSwiftPackageReference "UIPilot" */;

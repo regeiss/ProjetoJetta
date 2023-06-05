@@ -7,9 +7,18 @@
 
 import Foundation
 import RealmSwift
+import Combine
 
 class PostoViewModel: ObservableObject
 {
+    @Published var postos = [Posto]()
+    
+    init()
+    {
+        let realm = try? Realm()
+        
+    }
+    
     func saveObject(posto: Posto, isEdit: Bool, nome: String, logo: String)
     {
         do
