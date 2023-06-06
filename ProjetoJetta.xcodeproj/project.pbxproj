@@ -28,8 +28,8 @@
 		E19300972A1D9160009C7879 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300962A1D9160009C7879 /* DatabaseManager.swift */; };
 		E193009A2A1EEE35009C7879 /* PostoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19300992A1EEE35009C7879 /* PostoViewModel.swift */; };
 		E193009C2A225980009C7879 /* AbastecimentoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193009B2A225980009C7879 /* AbastecimentoScreen.swift */; };
-		E19B923E2A2E215B00F9E592 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B923D2A2E215B00F9E592 /* LoginScreen.swift */; };
 		E19B92452A2E23BC00F9E592 /* FileLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B92442A2E23BC00F9E592 /* FileLoginViewModel.swift */; };
+		E1A36E892A2E9CB100F902C6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A36E882A2E9CB100F902C6 /* LoginScreen.swift */; };
 		E1AF16DE2A296E9A008E5408 /* UltimoAbastecimentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16DD2A296E9A008E5408 /* UltimoAbastecimentoView.swift */; };
 		E1AF16E12A2D4E33008E5408 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E1AF16E02A2D4E33008E5408 /* Alamofire */; };
 		E1AF16E42A2D4F4B008E5408 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF16E32A2D4F4B008E5408 /* APIRequest.swift */; };
@@ -99,8 +99,8 @@
 		E19300962A1D9160009C7879 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		E19300992A1EEE35009C7879 /* PostoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostoViewModel.swift; sourceTree = "<group>"; };
 		E193009B2A225980009C7879 /* AbastecimentoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbastecimentoScreen.swift; sourceTree = "<group>"; };
-		E19B923D2A2E215B00F9E592 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E19B92442A2E23BC00F9E592 /* FileLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoginViewModel.swift; sourceTree = "<group>"; };
+		E1A36E882A2E9CB100F902C6 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E1AF16DD2A296E9A008E5408 /* UltimoAbastecimentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimoAbastecimentoView.swift; sourceTree = "<group>"; };
 		E1AF16E32A2D4F4B008E5408 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E1AF16E52A2D5A66008E5408 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -349,6 +349,7 @@
 		E19B923F2A2E21B300F9E592 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				E1A36E882A2E9CB100F902C6 /* LoginScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -395,7 +396,6 @@
 				E19B92422A2E21E000F9E592 /* Model */,
 				E19B92412A2E21C900F9E592 /* ViewModel */,
 				E19B923F2A2E21B300F9E592 /* Screen */,
-				E19B923D2A2E215B00F9E592 /* LoginScreen.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -906,13 +906,13 @@
 				E1BDC6532A0FDFAD00F71A08 /* AppThemeViewModifier.swift in Sources */,
 				E1DF6AC42A1D41A70028A8FA /* PostoScreen.swift in Sources */,
 				E1BDC64B2A0EF5D600F71A08 /* SideBarMenuView.swift in Sources */,
+				E1A36E892A2E9CB100F902C6 /* LoginScreen.swift in Sources */,
 				E19300772A1ADF9A009C7879 /* AbastecimentoListaDetalheView.swift in Sources */,
 				E19300842A1C2DC3009C7879 /* PerfilModel.swift in Sources */,
 				E19300972A1D9160009C7879 /* DatabaseManager.swift in Sources */,
 				E19300752A1ADD9C009C7879 /* AbastecimentoViewModel.swift in Sources */,
 				E1BDC6122A0DA79F00F71A08 /* ProjetoJettaApp.swift in Sources */,
 				E1BDC6622A119F6F00F71A08 /* ListaVeiculoDetalheView.swift in Sources */,
-				E19B923E2A2E215B00F9E592 /* LoginScreen.swift in Sources */,
 				E1AF16F12A2D6177008E5408 /* KeychainKey.swift in Sources */,
 				E1AF16E82A2D5AE5008E5408 /* Auth.swift in Sources */,
 				E19300722A1AD987009C7879 /* AbastecimentoModel.swift in Sources */,

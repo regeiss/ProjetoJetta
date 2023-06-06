@@ -22,3 +22,10 @@ class Posto: Object, ObjectKeyIdentifiable
         self.logo = logo
     }
 }
+
+struct PostoDTO: Identifiable
+{
+    let id: ObjectId
+    let nome: String
+    let logo: String
+}

@@ -78,7 +78,7 @@ class APIRequest<Parameters: Encodable, Model: Decodable>
             {
                 if error != nil
                 {
-                    failure(APIError.response) // Added this
+                    failure(APIError.response)
                 }
             }
         }

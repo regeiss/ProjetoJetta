@@ -11,13 +11,27 @@ import Combine
 
 class PostoViewModel: ObservableObject
 {
-    @Published var postos = [Posto]()
+    @Published var postos = [PostoDTO]()
     
     init()
     {
         let realm = try? Realm()
-        
+        // https://academy.realm.io/posts/isolating-your-data-layer/
+//        if let postos = realm?.objects(Posto.self)
+//        {
+//            self.postos = convertToArray(results: postos)
+//        }
     }
+    
+    private func convertToArray<R>(results: Results<R>) -> [R] where R: Object {
+        var arrayOfResults: [R] = []
+        for result in results {
+            arrayOfResults.append(result)
+        }
+        return arrayOfResults
+    }
+    
+    
     
     func saveObject(posto: Posto, isEdit: Bool, nome: String, logo: String)
     {
