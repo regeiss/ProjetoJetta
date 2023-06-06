@@ -13,6 +13,7 @@ import UIPilot
 struct PostoListaScreen: View
 {
     @ObservedResults(Posto.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var postos
+    @StateObject private var viewModel = PostoViewModel()
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     
     var body: some View

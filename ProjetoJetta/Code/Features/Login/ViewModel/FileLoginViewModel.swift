@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class LoginViewModel: ObservableObject
 {
     @Published var username: String = ""
@@ -32,5 +31,10 @@ class LoginViewModel: ObservableObject
         } failure: { error in
             self.error = error
         }
+    }
+    
+    func logout()
+    {
+        Auth.shared.logout()
     }
 }
