@@ -23,6 +23,16 @@ class PostoViewModel: ObservableObject
 //        }
 //    }
     
+    func add()
+    {
+        
+    }
+    
+    func delete(at indexSet: IndexSet)
+    {
+        
+    }
+    
     func saveObject(posto: Posto, isEdit: Bool, nome: String, logo: String)
     {
         do
