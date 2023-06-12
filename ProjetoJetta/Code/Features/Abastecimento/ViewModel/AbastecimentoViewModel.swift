@@ -6,23 +6,8 @@
 //
 
 import Foundation
-import RealmSwift
 
-class AbastecimentoViewModel: ObservableObject
+class AbastecimentoViewModel
 {
-    func saveObject(abastecimento: Abastecimento)
-    {
-        do
-        {
-            let realm = try Realm()
-            try realm.write
-            {
-                realm.add(abastecimento)
-            }
-        }
-        catch let error as NSError
-        {
-            print(error)
-        }
-    }
+ 
 }

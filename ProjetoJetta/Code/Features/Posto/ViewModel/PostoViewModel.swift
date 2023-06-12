@@ -6,59 +6,44 @@
 //
 
 import Foundation
-import RealmSwift
+import CoreData
 import Combine
 
 class PostoViewModel: ObservableObject
 {
-//    @Published var postos = Posto
-//    
-//    init()
-//    {
-//        let realm = try? Realm()
-//        if let postos = realm?.objects(Posto.self)
-//        {
-//            self.postos = postos.toArray(ofType: PostoDTO.self) as [PostoDTO]
-//            print(self.postos)
-//        }
-//    }
-    
-    func add()
+    @Published var postosLista: [Posto] = []
+
+    private var bag: AnyCancellable?
+
+    init(postoPublisher: AnyPublisher<[Posto], Never> = PostoPublisher.shared.postoCVS.eraseToAnyPublisher())
     {
-        
+        bag = postoPublisher.sink { [unowned self] postosLista in
+            self.postosLista = postosLista
+        }
+    }
+
+    func add(posto: NovoPosto)
+    {
+        PostoPublisher.shared.add(posto: posto)
+    }
+
+    func update(posto: Posto)
+    {
+        PostoPublisher.shared.update(posto: posto)
     }
     
-    func delete(at indexSet: IndexSet)
+    func delete(posto: Posto)
     {
-        
+        PostoPublisher.shared.delete(posto: posto)
     }
     
-    func saveObject(posto: Posto, isEdit: Bool, nome: String, logo: String)
+    func inserePadrao()
     {
-        do
-        {
-            let realm = try Realm()
-            try realm.write
-            {
-                if isEdit
-                {
-                    let postoEditado = posto.thaw()
-                    postoEditado?.nome = nome
-                    postoEditado?.logo = logo
-                    realm.add(postoEditado!, update: .modified)
-                }
-                else
-                {
-                    let posto = Posto()
-                    posto.nome = nome
-                    posto.logo = logo
-                    realm.add(posto)
-                }
-            }
-        }
-        catch let error as NSError
-        {
-            print(error)
-        }
+        PostoPublisher.shared.inserePadrao()
+    }
+    
+    func selecionarPostoPadrao()
+    {
+        PostoPublisher.shared.selecionarPostoPadrao()
     }
 }

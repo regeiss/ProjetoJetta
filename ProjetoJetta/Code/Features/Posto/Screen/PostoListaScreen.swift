@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-import RealmSwift
 import UIPilot
 
 @available(iOS 16.0, *)
 struct PostoListaScreen: View
 {
-    @ObservedResults(Posto.self, sortDescriptor: SortDescriptor(keyPath: "id", ascending: true)) var postos
     @StateObject private var viewModel = PostoViewModel()
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     
@@ -20,14 +18,14 @@ struct PostoListaScreen: View
     {
         List
         {
-            ForEach(postos) { posto in
+            ForEach(viewModel.postosLista) { posto in
                 HStack
                 {
-                    ListaPostoDetalheView(posto: posto)
+                    PostoListaDetalheView(posto: posto)
                 }
             }
-            .onDelete(perform: $postos.remove(atOffsets:))
-            if postos.isEmpty
+            .onDelete(perform: deletePostos)
+            if viewModel.postosLista.isEmpty
             {
                 Text("").listRowBackground(Color.clear)
             }
@@ -40,6 +38,15 @@ struct PostoListaScreen: View
                 pilot.push(.adicaoPosto(posto: Posto()))
             }
                 label: { Image(systemName: "plus")}}
+        }
+    }
+    
+    func deletePostos(at offsets: IndexSet)
+    {
+        for offset in offsets
+        {
+            let posto = viewModel.postosLista[offset]
+            viewModel.delete(posto: posto)
         }
     }
 }

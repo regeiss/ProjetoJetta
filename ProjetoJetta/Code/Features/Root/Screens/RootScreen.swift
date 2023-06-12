@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIPilot
-import RealmSwift
 
 @available(iOS 16.0, *)
 struct RootScreen: View
@@ -43,6 +42,6 @@ struct RootScreen: View
             }
             .gesture(drag)
             .modifier(DarkModeViewModifier())
-        }
+        }.environment(\.managedObjectContext, ProjetoJettaApp.persistenceController.container.viewContext)
     }
 }

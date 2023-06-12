@@ -6,20 +6,19 @@
 //
 
 import SwiftUI
-import RealmSwift
 import UIPilot
 
-struct ListaPostoDetalheView: View
+struct PostoListaDetalheView: View
 {
-    @ObservedRealmObject var posto: Posto
     @EnvironmentObject var pilot: UIPilot<AppRoute>
+    var posto: Posto
     
     var body: some View
     {
         HStack
         {
-            Text(posto.nome)
-            Text(posto.logo)
+            Text(posto.nome ?? "")
+            Text(posto.bandeira ?? "")
         }
         .onTapGesture {
             pilot.push(.edicaoPosto(posto: posto))

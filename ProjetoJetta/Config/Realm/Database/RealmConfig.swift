@@ -6,12 +6,3 @@
 //
 
 import Foundation
-import RealmSwift
-
-struct RealmConfig
-{
-        static var configuration: Realm.Configuration
-        {
-            Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
-        }
-}

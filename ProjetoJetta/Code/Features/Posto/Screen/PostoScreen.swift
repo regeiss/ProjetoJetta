@@ -7,7 +7,7 @@
 
 import SwiftUI
 import UIPilot
-import RealmSwift
+import CoreData
 import FormValidator
 
 enum PostoFocusable: Hashable
@@ -20,10 +20,9 @@ class PostoFormInfo: ObservableObject
 {
     @Published var manager = FormManager(validationType: .deferred)
     @FormField(validator: NonEmptyValidator(message: "Preencha este campo!"))
-    
     var nome: String = ""
     lazy var nomeVazio = _nome.validation(manager: manager)
-    var logo: String = ""
+    var bandeira: String = ""
 }
 
 @available(iOS 16.0, *)
@@ -31,7 +30,7 @@ struct PostoScreen: View
 {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @StateObject private var viewModel = PostoViewModel()
-    @ObservedObject var form = PostoFormInfo()
+    @ObservedObject var formInfo = PostoFormInfo()
     @FocusState private var postoInFocus: PostoFocusable?
     @State var isSaveDisabled: Bool = true
     
@@ -46,23 +45,23 @@ struct PostoScreen: View
             {
                 Section
                 {
-                    TextField("nome", text: $form.nome)
-                        .validation(form.nomeVazio)
+                    TextField("nome", text: $formInfo.nome)
+                        .validation(formInfo.nomeVazio)
                         .focused($postoInFocus, equals: .nome)
                         .onAppear{ DispatchQueue.main.asyncAfter(deadline: .now() + 0.50) {self.postoInFocus = .nome}}
                     
-                    TextField("logo", text: $form.logo)
+                    TextField("bandeira", text: $formInfo.bandeira)
                 }
             }
             .scrollContentBackground(.hidden)
-            .onReceive(form.manager.$allValid) { isValid in
+            .onReceive(formInfo.manager.$allValid) { isValid in
                 self.isSaveDisabled = !isValid}
         }.onAppear
         {
             if isEdit
             {
-                form.nome = posto.nome
-                form.logo = posto.logo
+                formInfo.nome = posto.nome ?? ""
+                formInfo.bandeira = posto.bandeira ?? ""
             }
         }
         .background(Color("backGroundMain"))
@@ -88,11 +87,19 @@ struct PostoScreen: View
     
     func save()
     {
-        let posto = Posto()
-        
-        posto.nome = form.nome
-        posto.logo = form.logo
-
-        viewModel.saveObject(posto: posto, isEdit: isEdit, nome: posto.nome, logo: posto.logo)
+        let valid = formInfo.manager.triggerValidation()
+        if valid
+        {
+            if isEdit
+            {
+                posto.nome = formInfo.nome
+                viewModel.update(posto: posto)
+            }
+            else
+            {
+                let nvp = NovoPosto(id: UUID(), nome: formInfo.nome, bandeira: formInfo.bandeira ?? "", padrao: false)
+                viewModel.add(posto: nvp)
+            }
+        }
     }
 }
